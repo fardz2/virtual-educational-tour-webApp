@@ -4,12 +4,22 @@ import Link from "next/link";
 interface ButtonProps {
     href: string;
     text: string;
+    primary: boolean;
 }
 
-const Button = ( props: ButtonProps ) => {
+const Button = (props: ButtonProps) => {
     return (
         <>
-            <Link href={props.href} className="px-6 py-4 bg-sky-600 text-white rounded font-medium border">{props.text}</Link>
+            <Link
+                href={props.href}
+                className={`py-4 font-medium ${
+                    props.primary
+                        ? "px-8 bg-blue-600 text-white rounded hover:opacity-90"
+                        : "px-6 text-white"
+                }`}
+            >
+                {props.text}
+            </Link>
         </>
     );
 };

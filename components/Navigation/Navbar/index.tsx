@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useState }from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -34,11 +34,7 @@ const Navbar = () => {
                         onClick={() => setNav(!nav)}
                         className="w-[92px] cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
                     >
-                        {nav ? (
-                            "open"
-                        ) : (
-                            "close"
-                        )}
+                        {nav ? "open" : "close"}
                     </div>
                     <Link
                         href={"/"}
