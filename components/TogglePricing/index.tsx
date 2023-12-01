@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 
 const TogglePricing = () => {
-    const [yearly, setYearly] = useState<boolean>(true)
+    const [yearly, setYearly] = useState<boolean>(true);
 
     return (
         <>

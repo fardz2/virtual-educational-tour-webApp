@@ -29,7 +29,7 @@ const ContentListSection = () => {
                     />
                     <div className="text-7xl font-bold">{">"}</div>
                 </div> */}
-                <CaraouselContentList/>
+                <CaraouselContentList />
             </div>
         </>
     );

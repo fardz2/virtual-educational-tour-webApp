@@ -1,9 +1,5 @@
-import Image from "next/image";
 import Navbar from "@/components/Navigation/Navbar";
-import Button from "@/components/Button";
 import Footer from "@/pages/Footer";
-import TourContentCard from "@/components/TourContentCard";
-import FeatureCard from "@/components/FeatureCard";
 import FeatureSection from "@/pages/FeatureSection";
 import ContentListSection from "@/pages/ContentListSection";
 import PricingSection from "@/pages/PricingSection";
@@ -17,7 +13,7 @@ export default function Home() {
 
             {/* Hero Section Start */}
             <section className="min-h-screen bg-gradient-to-tl from-blue-600 to-teal-100 to-90%">
-                <HeroSection/>
+                <HeroSection />
             </section>
             {/* Hero Section End */}
 
@@ -29,19 +25,19 @@ export default function Home() {
 
             {/* Content List Section Start */}
             <section className="min-h-screen ">
-                <ContentListSection/>
+                <ContentListSection />
             </section>
             {/* Content List Section End */}
 
             {/* Benefit Section Start */}
             <section className="min-h-screen pt-24 px-5 md:px-24">
-                <BenefitSection/>
+                <BenefitSection />
             </section>
             {/* Benefit Section End */}
 
             {/* Pricing Section Start */}
             <section className="py-24">
-                <PricingSection/>
+                <PricingSection />
             </section>
             {/* Pricing Section End */}
 
