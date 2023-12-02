@@ -20,7 +20,8 @@ const AccountButton = () => {
                 <button
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex flex-row gap-2 border rounded-lg shadow-sm bg-white px-4 py-1.5">
+                    className="flex flex-row gap-2 border rounded-lg shadow-sm bg-white px-4 py-1.5"
+                >
                     <List size={28} color="black" />
                     <UserCircle size={28} weight="fill" />
                 </button>

@@ -7,7 +7,9 @@ const PricingSection = () => {
         <>
             <section>
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-5xl font-bold">Pricing Section</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">
+                        Pricing Section
+                    </h1>
                     <p className="my-4 text-center">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Et, consequuntur.

@@ -18,7 +18,9 @@ const ForumCard = () => {
                 </div>
 
                 <div className="grid grid-cols-3 items-center">
-                    <p className="text-sm col-span-1 text-gray-600">25 komentar</p>
+                    <p className="text-sm col-span-1 text-gray-600">
+                        25 komentar
+                    </p>
                     <div className="flex flex-row gap-1 col-span-2 justify-end items-center">
                         <input
                             type="text"

@@ -9,14 +9,14 @@ const WelcomePage = () => {
         <>
             <section>
                 <h1 className="w-full py-2.5 text-center">iklan</h1>
-                <AppNavbar/>
-                <section className="min-h-screen grid grid-cols-1 md:grid-cols-11 px-5 md:px-12">
+                <AppNavbar />
+                <section className="min-h-screen grid md:gap-6 grid-cols-1 md:grid-cols-11 px-5 md:px-12">
                     <div className="md:col-span-8 ">
-                        <TourSection/>
-                        <ClassSection/>
+                        <TourSection />
+                        <ClassSection />
                     </div>
                     <div className="md:col-span-3">
-                        <ForumSection/>
+                        <ForumSection />
                     </div>
                 </section>
             </section>

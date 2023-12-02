@@ -28,24 +28,24 @@ const BenefitSection = () => {
 
     return (
         <>
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-12 bg-white flex justify-center items-center">
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 p-12 rounded-2xl bg-white shadow-md">
+                <div className="p-12 rounded-lg flex justify-start items-start">
                     <div>
                         <Image
                             src={"/benefitImage.webp"}
                             width={500}
                             height={500}
                             alt="Bocil VR"
-                            className="bg-cover"
+                            className="rounded-lg"
                         />
                     </div>
                 </div>
                 <div>
-                    <h1 className="font-bold text-5xl max-w-lg">
+                    <h1 className="font-bold text-4xl md:text-5xl max-w-lg">
                         Benefits of Educating Yourself in a World of Learning
                         Possibilities.
                     </h1>
-                    <p className="mt-6">
+                    <p className="mt-2">
                         Transform the way you learn with an immersive education
                         platform that goes beyond traditional boundaries.
                         Elevate your learning experience and unlock a world of

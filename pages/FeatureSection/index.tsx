@@ -40,10 +40,10 @@ const FeatureSection = () => {
     return (
         <>
             <div className="flex flex-col justify-center items-center">
-                <h1 className="font-bold text-5xl text-center max-w-lg">
+                <h1 className="font-bold text-4xl md:text-5xl text-center max-w-lg">
                     Explore the Future of Learning with Our Features
                 </h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 justify-center items-center gap-4 mt-24">
+                <div className="grid grid-cols-2 md:grid-cols-3 justify-start items-start gap-4 mt-24">
                     {FeatureInputData.map((input, id) => (
                         <FeatureCard
                             key={id}

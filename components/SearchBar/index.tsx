@@ -1,9 +1,7 @@
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
 import React, { useState } from "react";
 
-
-const SearchBar = ({ }) => {
-
+const SearchBar = ({}) => {
     return (
         <>
             <div className="relative">
@@ -20,7 +18,7 @@ const SearchBar = ({ }) => {
                         className="text-gray-600 hover:text-gray-700"
                     >
                         <span className="sr-only">Search</span>
-                        <MagnifyingGlass size={20} color="gray"/>
+                        <MagnifyingGlass size={20} color="gray" />
                     </button>
                 </span>
             </div>
