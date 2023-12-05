@@ -3,6 +3,11 @@ import Link from "next/link";
 
 interface PricingCardProps {
     favorit: boolean;
+    title: string;
+    desc: string;
+    benefit: string;
+    price: string;
+    calculation: string;
 }
 
 const PricingCard = (props: PricingCardProps) => {
@@ -14,15 +19,12 @@ const PricingCard = (props: PricingCardProps) => {
                 }`}
             >
                 <div className="mt-4">
-                    <h1 className="text-3xl font-semibold">Nama Pricing</h1>
-                    <p className="mt-2 text-justify">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Unde aliquid explicabo qui.
-                    </p>
+                    <h1 className="text-3xl font-bold">{props.title}</h1>
+                    <p className="mt-2">{props.desc}</p>
                 </div>
                 <div>
-                    <h1 className="text-4xl font-bold">harga pricing</h1>
-                    <p className="mt-1">perhitungan pricing</p>
+                    <h1 className="text-4xl font-bold">{props.price}</h1>
+                    <p className="mt-1">{props?.calculation}</p>
                 </div>
                 <div className="flex flex-col gap-2">
                     <Link
@@ -41,19 +43,14 @@ const PricingCard = (props: PricingCardProps) => {
                 <div>
                     <h2 className="text-lg font-semibold">keuntungan</h2>
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
+                        <li>{props?.benefit}</li>
+                        <li>{props?.benefit}</li>
+                        <li>{props?.benefit}</li>
                     </ul>
                     <h2 className="text-lg font-semibold">keuntungan</h2>
                     <ul>
                         <li>1</li>
                         <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
                     </ul>
                 </div>
             </div>

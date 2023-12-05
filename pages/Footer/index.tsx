@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
                         <div className="">
                             {/* To The Top Button */}
                             <div className="absolute end-2 -top-4">
-                                <a
+                                <Link
                                     className="inline-block rounded-full bg-blue-600 p-2 text-white shadow transition hover:bg-blue-500 sm:p-3 lg:p-4"
                                     href="#MainContent"
                                 >
@@ -27,10 +28,10 @@ const Footer = () => {
                                             clipRule="evenodd"
                                         />
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
-                            <div className="flex justify-center text-blue-600 sm:justify-start">
-                                Logo Kita
+                            <div className="flex justify-center font-bold text-blue-600 sm:justify-start text-2xl">
+                                EduVenturer
                             </div>
 
                             <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
@@ -41,7 +42,7 @@ const Footer = () => {
 
                             <ul className="mt-8 flex justify-center gap-4 sm:justify-start md:gap-6">
                                 <li>
-                                    <a
+                                    <Link
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
@@ -62,11 +63,11 @@ const Footer = () => {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
+                                    <Link
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
@@ -87,11 +88,11 @@ const Footer = () => {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
+                                    <Link
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
@@ -110,7 +111,7 @@ const Footer = () => {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -123,30 +124,30 @@ const Footer = () => {
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Company Mission
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Meet Our Team
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Careers
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -158,30 +159,30 @@ const Footer = () => {
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Interactive Class
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Virtual Educational Tours
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-700 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Analytic
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -193,7 +194,7 @@ const Footer = () => {
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a
+                                        <Link
                                             className="flex items-center justify-center sm:justify-start gap-1.5"
                                             href="/"
                                         >
@@ -215,11 +216,11 @@ const Footer = () => {
                                             <span className="text-gray-700">
                                                 elsamrafisptr@gmail.com
                                             </span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="flex items-center justify-center sm:justify-start gap-1.5 "
                                             href="/"
                                         >
@@ -241,7 +242,7 @@ const Footer = () => {
                                             <span className="text-gray-700">
                                                 (+62)812-3456-7890
                                             </span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="flex items-end md:items-start justify-center sm:justify-start gap-1.5 ">
@@ -281,25 +282,25 @@ const Footer = () => {
                                     All rights reserved.
                                 </span>
 
-                                <a
+                                <Link
                                     className="inline-block text-blue-600 underline transition hover:text-blue-600/75"
                                     href="/"
                                 >
                                     Terms & Conditions
-                                </a>
+                                </Link>
 
                                 <span>&middot;</span>
 
-                                <a
+                                <Link
                                     className="inline-block text-blue-600 underline transition hover:text-blue-600/75"
                                     href="/"
                                 >
                                     Privacy Policy
-                                </a>
+                                </Link>
                             </p>
 
                             <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-                                &copy; 2023 Virtual Educational Tours
+                                &copy; 2023 EduVenturer, Melampaui Inspirasimu
                             </p>
                         </div>
                     </div>

@@ -1,11 +1,22 @@
 import React from "react";
 import Badge from "../Badges";
+import Link from "next/link";
+import Image from "next/image";
 
 const TourCard = () => {
+    const tourPathName = "/welcome/tour/";
+    const id = Math.floor(Math.random() * 100) + 1;
     return (
         <>
-            <div className="p-4 max-w-min">
-                <div className="w-60 h-60 bg-white rounded-lg"></div>
+            <Link href={`${tourPathName}/${id}`} className="p-4 max-w-min">
+                <div className="w-60 h-60  rounded-lg">
+                    <Image
+                        src={`https://placehold.co/400x400/png`}
+                        width={400}
+                        height={400}
+                        alt="placehold"
+                    />
+                </div>
                 <div className="mt-4 flex flex-col gap-2">
                     <h1 className="text-2xl font-bold">Title</h1>
                     <div className="flex flex-row gap-1">
@@ -17,7 +28,7 @@ const TourCard = () => {
                         Quibusdam, quo!
                     </h2>
                 </div>
-            </div>
+            </Link>
         </>
     );
 };

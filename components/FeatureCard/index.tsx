@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Link from "next/link";
 
 interface FeatureCardProps {
@@ -10,12 +10,12 @@ const FeatureCard = (props: FeatureCardProps) => {
     return (
         <>
             <div className="flex flex-col gap-2 p-4 rounded-lg">
-                <div className="w-10 h-10 rounded bg-blue-200"></div>
+                <div className="w-10 h-10 rounded bg-blue-200">{}</div>
                 <div className="flex flex-col gap-1 ">
-                    <h1 className="text-xl md:text-2xl font-bold">
+                    <h1 className="text-xl md:text-2xl font-bold dark:text-neutral-100">
                         {props.title}
                     </h1>
-                    <p>{props.desc}</p>
+                    <p className="text-gray-700 dark:text-gray-200">{props.desc}</p>
                 </div>
             </div>
         </>

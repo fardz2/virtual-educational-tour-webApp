@@ -40,7 +40,7 @@ const Navbar = () => {
                         href={"/"}
                         className="flex items-center justify-end md:justify-start w-[92px] cursor-pointer capitalize font-medium text-white"
                     >
-                        Logo
+                        EduVenturer
                     </Link>
                     <div className="flex">
                         <ul className="hidden md:flex">
@@ -56,14 +56,14 @@ const Navbar = () => {
                     </div>
                     <div className="w-[92px] md:w-auto">
                         <Link
-                            href={"/signin"}
+                            href={"/login"}
                             className="border border-slate-900 h-[43.5px] mr-4 rounded hidden md:inline-flex justify-center items-center w-[91.63px] cursor-pointer capitalize font-medium text-slate-900 hover:bg-slate-200 hover:text-slate-900 duration-200"
                         >
                             Sign In
                         </Link>
 
                         <Link
-                            href={"/signup"}
+                            href={"/register"}
                             className="px-4 py-3 rounded cursor-pointer capitalize font-medium text-white hover:text-white duration-200 bg-slate-900 hover:bg-slate-800"
                         >
                             Sign Up

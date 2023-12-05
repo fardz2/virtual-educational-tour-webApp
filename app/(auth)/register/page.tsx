@@ -125,20 +125,20 @@ const RegisterPage = () => {
                                         <p className="text-sm text-gray-500">
                                             By creating an account, you agree to
                                             our
-                                            <a
+                                            <Link
                                                 href="#"
                                                 className="text-gray-700 underline"
                                             >
                                                 {" "}
                                                 terms and conditions
-                                            </a>{" "}
+                                            </Link>{" "}
                                             and{" "}
-                                            <a
+                                            <Link
                                                 href="#"
                                                 className="text-gray-700 underline"
                                             >
                                                 privacy policy
-                                            </a>
+                                            </Link>
                                             .
                                         </p>
                                     </div>
@@ -150,12 +150,12 @@ const RegisterPage = () => {
 
                                         <p className="mt-4 text-sm text-center text-gray-500 sm:mt-0">
                                             Already have an account?
-                                            <a
+                                            <Link
                                                 href="#"
                                                 className="text-gray-700 underline"
                                             >
                                                 Log in
-                                            </a>
+                                            </Link>
                                             .
                                         </p>
                                     </div>

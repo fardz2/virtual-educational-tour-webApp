@@ -5,7 +5,7 @@ import React from "react";
 const ContentListSection = () => {
     return (
         <>
-            <div className="flex flex-col pt-12 bg-white">
+            <div className="flex flex-col pt-12 bg-gradient-to-b min-h-screen from-blue-50 from-10% to-blue-500">
                 <h1 className="text-center font-bold text-5xl">
                     Content List Section
                 </h1>

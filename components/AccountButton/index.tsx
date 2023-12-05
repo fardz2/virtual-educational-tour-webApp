@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { UserCircle, List } from "@phosphor-icons/react";
+import Link from "next/link";
 
 const AccountButton = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const AccountButton = () => {
     };
 
     return (
-        <div className="py-6">
+        <div className="py-6 z-50">
             <div className="relative inline-block">
                 <button
                     type="button"
@@ -34,49 +35,49 @@ const AccountButton = () => {
                             aria-labelledby="options-menu"
                         >
                             <li>
-                                <a
-                                    href="#"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                <Link
+                                    href="/welcome/profile"
+                                    className="block px-4 py-2 font-semibold text-gray-700 hover:bg-gray-100"
                                     onClick={closeDropdown}
                                 >
                                     Profile
-                                </a>
+                                </Link>
                             </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            {/* <li>
+                                <Link
+                                    href="/welcome/profile/article"
+                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                                     onClick={closeDropdown}
                                 >
                                     My Article
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                </Link>
+                            </li> */}
+                            {/* <li>
+                                <Link
+                                    href="/welcome/profile/history"
+                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                                     onClick={closeDropdown}
                                 >
                                     History
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                <Link
+                                    href="/welcome/profile/forum"
+                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                                     onClick={closeDropdown}
                                 >
                                     Forum
-                                </a>
-                            </li>
+                                </Link>
+                            </li> */}
                             <li>
-                                <a
-                                    href="#"
-                                    className="block px-4 py-2 text-sm text-red-700 rounded-b-lg hover:bg-gray-100"
+                                <Link
+                                    href="/logout"
+                                    className="block px-4 py-2 text-red-700 rounded-b-lg hover:bg-gray-100"
                                     onClick={closeDropdown}
                                 >
                                     Log Out
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

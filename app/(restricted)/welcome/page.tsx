@@ -7,8 +7,13 @@ import React from "react";
 const WelcomePage = () => {
     return (
         <>
-            <section>
-                <h1 className="w-full py-2.5 text-center">iklan</h1>
+            <section className="bg-white">
+                <h1 className="w-full py-3 text-center bg-gradient-to-r from-blue-700 to-sky-300 text-white">
+                    Festival Promo Akhir Tahun 2023{" "}
+                    <span className="text-white font-semibold underline">
+                        #SemarakAkhirTahun!
+                    </span>
+                </h1>
                 <AppNavbar />
                 <section className="min-h-screen grid md:gap-6 grid-cols-1 md:grid-cols-11 px-5 md:px-12">
                     <div className="md:col-span-8 ">
