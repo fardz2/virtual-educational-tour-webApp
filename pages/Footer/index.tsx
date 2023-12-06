@@ -4,14 +4,14 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <footer className="bg-white">
+            <footer className="bg-gray-50 dark:bg-gray-800">
                 <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 relative">
                         <div className="">
                             {/* To The Top Button */}
                             <div className="absolute end-2 -top-4">
                                 <Link
-                                    className="inline-block rounded-full bg-blue-600 p-2 text-white shadow transition hover:bg-blue-500 sm:p-3 lg:p-4"
+                                    className="inline-block rounded-full bg-blue-600  dark:bg-tealSec p-2 text-white shadow transition hover:bg-blue-500 sm:p-3 lg:p-4"
                                     href="#MainContent"
                                 >
                                     <span className="sr-only">Back to top</span>
@@ -30,11 +30,11 @@ const Footer = () => {
                                     </svg>
                                 </Link>
                             </div>
-                            <div className="flex justify-center font-bold text-blue-600 sm:justify-start text-2xl">
+                            <div className="flex justify-center font-bold text-blue-600 dark:text-tealSec sm:justify-start text-2xl">
                                 EduVenturer
                             </div>
 
-                            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-600 dark:text-gray-300 sm:max-w-xs sm:text-left">
                                 Lorem ipsum dolor, sit amet consectetur
                                 adipisicing elit. Incidunt consequuntur amet
                                 culpa cum itaque neque.
@@ -46,7 +46,7 @@ const Footer = () => {
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
-                                        className="text-gray-800 transition hover:text-gray-800/90"
+                                        className="text-gray-900 dark:text-gray-300 transition hover:text-gray-900/90 dark:hover:text-gray-300/90"
                                     >
                                         <span className="sr-only">
                                             Facebook
@@ -71,7 +71,7 @@ const Footer = () => {
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
-                                        className="text-gray-800 transition hover:text-gray-800/90"
+                                        className="text-gray-900 dark:text-gray-300 transition hover:text-gray-900/90 dark:hover:text-gray-300/90"
                                     >
                                         <span className="sr-only">
                                             Instagram
@@ -96,7 +96,7 @@ const Footer = () => {
                                         href="/"
                                         rel="noreferrer"
                                         target="_blank"
-                                        className="text-gray-800 transition hover:text-gray-800/90"
+                                        className="text-gray-900 dark:text-gray-300 transition hover:text-gray-900/90 dark:hover:text-gray-300/90"
                                     >
                                         <span className="sr-only">GitHub</span>
                                         <svg
@@ -118,14 +118,14 @@ const Footer = () => {
 
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">
+                                <p className="text-lg font-medium text-gray-900 dark:text-gray-300">
                                     About Us
                                 </p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Company Mission
@@ -134,7 +134,7 @@ const Footer = () => {
 
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-gray-400/75 hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Meet Our Team
@@ -143,7 +143,7 @@ const Footer = () => {
 
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-gray-400/75 hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Careers
@@ -153,14 +153,14 @@ const Footer = () => {
                             </div>
 
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">
+                                <p className="text-lg font-medium text-gray-900 dark:text-gray-300">
                                     Our Services
                                 </p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Interactive Class
@@ -169,7 +169,7 @@ const Footer = () => {
 
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Virtual Educational Tours
@@ -178,7 +178,7 @@ const Footer = () => {
 
                                     <li>
                                         <Link
-                                            className="text-gray-700 transition hover:text-gray-700/75"
+                                            className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75 transition hover:text-gray-700/75"
                                             href="/"
                                         >
                                             Analytic
@@ -188,7 +188,7 @@ const Footer = () => {
                             </div>
 
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">
+                                <p className="text-lg font-medium text-gray-900 dark:text-gray-300">
                                     Contact Us
                                 </p>
 
@@ -200,7 +200,7 @@ const Footer = () => {
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="h-5 w-5 shrink-0 text-gray-900"
+                                                className="h-5 w-5 shrink-0 text-gray-900 dark:text-gray-300 dark:hover:text-gray-300/75"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -213,7 +213,7 @@ const Footer = () => {
                                                 />
                                             </svg>
 
-                                            <span className="text-gray-700">
+                                            <span className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75">
                                                 elsamrafisptr@gmail.com
                                             </span>
                                         </Link>
@@ -226,7 +226,7 @@ const Footer = () => {
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="h-5 w-5 shrink-0 text-gray-900"
+                                                className="h-5 w-5 shrink-0 text-gray-900 dark:text-gray-300 dark:hover:text-gray-300/75"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -239,7 +239,7 @@ const Footer = () => {
                                                 />
                                             </svg>
 
-                                            <span className="text-gray-700">
+                                            <span className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-400/75">
                                                 (+62)812-3456-7890
                                             </span>
                                         </Link>
@@ -248,7 +248,7 @@ const Footer = () => {
                                     <li className="flex items-end md:items-start justify-center sm:justify-start gap-1.5 ">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 shrink-0 text-gray-900"
+                                            className="h-5 w-5 shrink-0 text-gray-900 dark:text-gray-300 dark:hover:text-gray-300/75"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -266,7 +266,7 @@ const Footer = () => {
                                             />
                                         </svg>
 
-                                        <address className="-mt-0.5 not-italic text-gray-700 items-start">
+                                        <address className="-mt-0.5 not-italic text-gray-700 items-start dark:text-gray-400 dark:hover:text-gray-400/75">
                                             Bandung, West Java, Indonesia
                                         </address>
                                     </li>
@@ -277,13 +277,13 @@ const Footer = () => {
 
                     <div className="mt-12 border-t border-gray-100 pt-6">
                         <div className="text-center sm:flex sm:justify-between sm:text-left">
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-gray-600 dark:text-gray-300">
                                 <span className="block sm:inline">
                                     All rights reserved.
                                 </span>
 
                                 <Link
-                                    className="inline-block text-blue-600 underline transition hover:text-blue-600/75"
+                                    className="inline-block text-blue-600 dark:text-blue-300 dark:hover:text-blue-300/75 underline transition hover:text-blue-600/75"
                                     href="/"
                                 >
                                     Terms & Conditions
@@ -292,14 +292,14 @@ const Footer = () => {
                                 <span>&middot;</span>
 
                                 <Link
-                                    className="inline-block text-blue-600 underline transition hover:text-blue-600/75"
+                                    className="inline-block text-blue-600 dark:text-blue-300 dark:hover:text-blue-300/75 underline transition hover:text-blue-600/75"
                                     href="/"
                                 >
                                     Privacy Policy
                                 </Link>
                             </p>
 
-                            <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+                            <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 sm:order-first sm:mt-0">
                                 &copy; 2023 EduVenturer, Melampaui Inspirasimu
                             </p>
                         </div>

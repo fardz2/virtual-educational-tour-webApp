@@ -5,23 +5,23 @@ import React, { useState } from "react";
 const FaqSection = () => {
     const [faq, setFaq] = useState([
         {
-            question: "How to create an account?",
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            question: "Bagaimana cara bergabung dengan paket Group Plan?",
+            answer: 'Anda dapat bergabung dengan Group Plan dengan mengundang anggota kelompok Anda ke dalam platform. Kami menyediakan manajemen pengguna yang mudah untuk meningkatkan kolaborasi.',
             open: false,
         },
         {
-            question: "How can I make payment using Paypal?",
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            question: "Apakah ada batasan jumlah anggota dalam Group Plan?",
+            answer: 'Ada batasan jumlah anggota dalam tiap Group Plan dengan perhitungan harga yang berbeda. Kami mendukung kolaborasi dalam skala besar untuk memfasilitasi pembelajaran bersama. Untuk skala institusi pendidikan dapat menghubungi <a href={``} class="underline cursor-pointer text-blue-300">Kontak Kami</a>',
             open: false,
         },
         {
-            question: "Can I cancel my plan?",
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            question: "Apakah konten premium dari Professional Plan dapat diakses secara offline?",
+            answer: 'Saat ini, konten premium hanya dapat diakses secara online untuk memastikan pengalaman terbaik dan pembaruan konten yang reguler.',
             open: false,
         },
         {
-            question: "How can I reach to support?",
-            answer: 'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+            question: "Bagaimana cara memberikan umpan balik atau saran untuk platform ini?",
+            answer: 'Kami sangat menghargai kontribusi dan umpan balik dari pengguna kami. Anda dapat mengirimkan saran atau umpan balik melalui formulir kontak di halaman bantuan kami.',
             open: false,
         },
     ]);
@@ -47,10 +47,6 @@ const FaqSection = () => {
                     <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl dark:text-neutral-50">
                         Frequently Asked Questions
                     </h2>
-                    <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600 dark:text-gray-200">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do
-                    </p>
                 </div>
 
                 <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
@@ -90,7 +86,7 @@ const FaqSection = () => {
                             <div
                                 className={`${
                                     item.open ? "block" : "hidden"
-                                } px-4 pb-5 sm:px-6 sm:pb-6`}
+                                } px-4 pb-5 sm:px-6 sm:pb-6 dark:text-gray-100 text-gray-900`}
                             >
                                 <p
                                     dangerouslySetInnerHTML={{
@@ -102,12 +98,12 @@ const FaqSection = () => {
                     ))}
                 </div>
 
-                <p className="text-center text-gray-600 textbase mt-9">
+                <p className="text-center text-gray-600 dark:text-gray-300 text-base mt-8">
                     Didn’t find the answer you are looking for?{" "}
                     <a
                         href="#"
                         title=""
-                        className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
+                        className="font-medium text-blue-600 dark:text-blue-300 transition-all duration-200 hover:text-blue-600 dark:hover:text-blue-300 focus:text-blue-700 hover:underline"
                     >
                         Contact our support
                     </a>

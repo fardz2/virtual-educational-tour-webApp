@@ -1,93 +1,53 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import TourContentCard from "../TourContentCard";
+import React, { useEffect, useState } from "react";
+import TourCard from "../TourCard";
 
-interface CaraouselProps {}
+const CarouselContentList = () => {
+    const [cards, setCards] = useState<React.ReactElement[]>([]);
+    const [current, setCurrent] = useState(0);
+    const [slideDirection, setSlideDirection] = useState<
+        "right" | "left" | undefined
+    >("left");
 
-const CaraouselContentList = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const cardsPerPage = 4;
+    const duplicateCards: React.ReactElement[] = Array.from(
+        { length: 10 },
+        (_, i) => <TourCard key={i} />,
+    );
 
-    const goToNextSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+    const handleNext = () => {
+        setSlideDirection("left");
+        setCurrent((prevPage) => prevPage + 1);
     };
 
-    const goToPrevSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
+    const handlePrev = () => {
+        setSlideDirection("right");
+        setCurrent((prevPage) => prevPage - 1);
     };
+
+    useEffect(() => {
+        setCards(duplicateCards);
+    }, []);
 
     return (
-        <>
-            {/* <div className="w-full px-12">
-                <Swiper
-                    spaceBetween={16}
-                    slidesPerView={"auto"}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Autoplay, Pagination]}
-                    className="mySwiper"
-                >
-                    <SwiperSlide>
-                        <TourContentCard
-                            title={`Judul dari educational tour`}
-                            desc="lorem ipsum dolor si amaet"
-                            href="/"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <TourContentCard
-                            title={`Judul dari educational tour`}
-                            desc="lorem ipsum dolor si amaet"
-                            href="/"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide></SwiperSlide>
-                </Swiper>
-            </div> */}
-
-            <div className={`relative overflow-hidden`}>
-                <div
-                    className={`flex transition-transform ease-in-out duration-500 transform -translate-x-full`}
-                >
-                    {/* {images.map((image, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.slide} ${
-                                index === currentSlide ? "active" : ""
-                            }`}
-                            style={{ backgroundImage: `url(${image})` }}
-                        />
-                    ))} */}
+        <div className="flex flex-row items-center justify-center h-[400px]">
+            <button onClick={handlePrev}>prev</button>
+            <div className="flex flex-row items-center justify-center h-[400px]">
+                {cards.map((card, index) => (
                     <div
-                        className={`w-screen h-80 shrink-0 opacity-50 transition-opacity ${
-                            currentSlide ? "opacity-100" : ""
+                        className={`w-full h-full ${
+                            current === index ? "block" : "hidden"
                         }`}
+                        key={index}
                     >
-                        <TourContentCard title="a" desc="" href="" />
-                        <TourContentCard title="b" desc="" href="" />
-                        <TourContentCard title="c" desc="" href="" />
+                        <TourCard />
                     </div>
-                </div>
-                <button
-                    className={`absolute top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer left-4`}
-                    onClick={goToPrevSlide}
-                >
-                    &lt;
-                </button>
-                <button
-                    className={`absolute top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer right-4`}
-                    onClick={goToNextSlide}
-                >
-                    &gt;
-                </button>
+                ))}
             </div>
-        </>
+            <button onClick={handleNext}>next</button>
+        </div>
     );
 };
 
-export default CaraouselContentList;
+export default CarouselContentList;

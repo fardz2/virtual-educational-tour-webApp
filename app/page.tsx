@@ -4,6 +4,8 @@ import FeatureSection from "@/pages/FeatureSection";
 import PricingSection from "@/pages/PricingSection";
 import HeroSection from "@/pages/HeroSection";
 import FaqSection from "@/pages/FaqSection";
+import LastCTA from "@/pages/LastCTA";
+import CarouselContentList from "@/components/CaraouselContentList";
 // Landing Page Before Authentication for Marketing
 export default function Home() {
     return (
@@ -12,7 +14,7 @@ export default function Home() {
 
             {/* Hero Section Start */}
             {/* dark mode butuh lebih gelap */}
-            <section className="min-h-screen bg-gradient-to-tl from-blueSec to-blueTer dark:bg-gradient-to-br dark:from-bluePrim dark:to-purpleSec dark:text-slate-50">
+            <section className="min-h-screen bg-gradient-to-tl dark:from-bluePrim dark:to-tealPrim dark:text-gray-50 text-gray-900 from-tealSec to-tertiary">
                 <HeroSection />
             </section>
             {/* Hero Section End */}
@@ -22,12 +24,9 @@ export default function Home() {
                 <FeatureSection />
             </section>
             {/* Feature Section End */}
-
-            {/* Content List Section Start */}
-            {/* <section className="min-h-screen relative ">
-                <ContentListSection />
-            </section> */}
-            {/* Content List Section End */}
+            <section className="w-full bg-white h-min">
+                <CarouselContentList />
+            </section>
 
             {/* Pricing Section Start */}
             <section className="py-24">
@@ -35,6 +34,10 @@ export default function Home() {
             </section>
             {/* Pricing Section End */}
             <FaqSection />
+            <section className="flex justify-center items-center py-16 px-5 ">
+                <LastCTA />
+            </section>
+
             {/* Footer Section Start */}
             <section>
                 <Footer />

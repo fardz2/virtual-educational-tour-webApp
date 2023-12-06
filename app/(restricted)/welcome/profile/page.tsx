@@ -69,10 +69,10 @@ const ProfilePage = () => {
                         Ini info aja{" "}
                     </div>
                     <div className="flex flex-col gap-6 px-6">
-                        <Link href={""} className="font-medium">
+                        <Link href={"/welcome/profile/edit/personal-data"} className="font-medium">
                             Data Pribadi
                         </Link>
-                        <Link href={""} className="font-medium">
+                        <Link href={"/welcome/profile/edit/personal-contact"} className="font-medium">
                             Kontak Pribadi
                         </Link>
                         <Link href={""} className="font-medium">

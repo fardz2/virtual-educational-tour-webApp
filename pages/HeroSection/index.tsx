@@ -8,7 +8,7 @@ const HeroSection = () => {
     return (
         <>
             <section className="h-full">
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 pt-32 gap-4 pl-5 md:pl-24 min-h-screen">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 pt-32 pl-5 md:pl-24 min-h-screen">
                     <div className="">
                         <h1 className="text-6xl md:text-7xl font-bold">
                             Get Ready to Explore Every Places in the World
