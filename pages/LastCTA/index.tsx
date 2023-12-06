@@ -3,7 +3,7 @@ import React from "react";
 
 const LastCTA = () => {
     return (
-        <section className="max-w-5xl py-12 dark:bg-gradient-to-tl dark:from-gray-300 dark:to-gray-50 bg-gradient-to-br from-tealPrim to-tealSec px-12 rounded-lg shadow-2xl shadow-tealSec/30 dark:shadow-gray-50/20">
+        <section className="max-w-5xl py-12 dark:bg-gradient-to-tl dark:from-gray-300 dark:to-gray-50 bg-gradient-to-br from-tealPrim to-tealSec px-5 md:px-12 rounded-lg shadow-2xl shadow-tealSec/30 dark:shadow-gray-50/20">
             <div className=" px-4 mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-y-10">
                     <div>
@@ -39,7 +39,8 @@ const LastCTA = () => {
                                     Ready to Dive into the Future of Learning?
                                 </h3>
                                 <p className="mt-2 text-base text-gray-600 capitalize">
-                                    Unlock the Gates to Knowledge and embark on Your Educational Odyssey Now!
+                                    Unlock the Gates to Knowledge and embark on
+                                    Your Educational Odyssey Now!
                                 </p>
 
                                 <a

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import AppNavbar from "@/components/Navigation/AppNavbar";
 import Image from "next/image";
@@ -10,7 +10,7 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`bg-gray-50 `}>
-                <AppNavbar/>
+                <AppNavbar />
                 <section className="grid grid-cols-5 w-full px-5 md:px-12 gap-6">
                     <div className="col-span-2 flex flex-col gap-4 mt-12">
                         <div className="bg-white flex flex-row gap-4 rounded-lg border p-4 items-center">
@@ -22,9 +22,15 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
                                 className="rounded-full bg-slate-100 aspect-square scale-75"
                             />
                             <div className="flex flex-col">
-                                <h1 className="text-xl font-bold">Elsam Rafi Saputra</h1>
-                                <p className="text-gray-600 font-normal">Mahasiswa</p>
-                                <p className="text-gray-600 font-normal">Univeristas Telkom</p>
+                                <h1 className="text-xl font-bold">
+                                    Elsam Rafi Saputra
+                                </h1>
+                                <p className="text-gray-600 font-normal">
+                                    Mahasiswa
+                                </p>
+                                <p className="text-gray-600 font-normal">
+                                    Univeristas Telkom
+                                </p>
                             </div>
                         </div>
                         <ul className="flex flex-col rounded-lg border">

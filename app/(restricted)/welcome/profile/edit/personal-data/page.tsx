@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 import React from "react";
 
 const PersonalData = () => {
-    const Router = useRouter()
+    const Router = useRouter();
     return (
         <div className="p-6 bg-white border rounded-lg">
             <div className="flex flex-row justify-between items-center">
-              <button onClick={() => Router.back()}>Kembali</button>
-              <button onClick={() => console.log()}>Simpan</button>
+                <button onClick={() => Router.back()}>Kembali</button>
+                <button onClick={() => console.log()}>Simpan</button>
             </div>
             <h1 className="font-bold text-2xl mt-4">Data Pribadi</h1>
             <hr className="my-4" />

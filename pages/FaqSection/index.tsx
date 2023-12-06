@@ -6,7 +6,7 @@ const FaqSection = () => {
     const [faq, setFaq] = useState([
         {
             question: "Bagaimana cara bergabung dengan paket Group Plan?",
-            answer: 'Anda dapat bergabung dengan Group Plan dengan mengundang anggota kelompok Anda ke dalam platform. Kami menyediakan manajemen pengguna yang mudah untuk meningkatkan kolaborasi.',
+            answer: "Anda dapat bergabung dengan Group Plan dengan mengundang anggota kelompok Anda ke dalam platform. Kami menyediakan manajemen pengguna yang mudah untuk meningkatkan kolaborasi.",
             open: false,
         },
         {
@@ -15,13 +15,15 @@ const FaqSection = () => {
             open: false,
         },
         {
-            question: "Apakah konten premium dari Professional Plan dapat diakses secara offline?",
-            answer: 'Saat ini, konten premium hanya dapat diakses secara online untuk memastikan pengalaman terbaik dan pembaruan konten yang reguler.',
+            question:
+                "Apakah konten premium dari Professional Plan dapat diakses secara offline?",
+            answer: "Saat ini, konten premium hanya dapat diakses secara online untuk memastikan pengalaman terbaik dan pembaruan konten yang reguler.",
             open: false,
         },
         {
-            question: "Bagaimana cara memberikan umpan balik atau saran untuk platform ini?",
-            answer: 'Kami sangat menghargai kontribusi dan umpan balik dari pengguna kami. Anda dapat mengirimkan saran atau umpan balik melalui formulir kontak di halaman bantuan kami.',
+            question:
+                "Bagaimana cara memberikan umpan balik atau saran untuk platform ini?",
+            answer: "Kami sangat menghargai kontribusi dan umpan balik dari pengguna kami. Anda dapat mengirimkan saran atau umpan balik melalui formulir kontak di halaman bantuan kami.",
             open: false,
         },
     ]);
@@ -99,13 +101,13 @@ const FaqSection = () => {
                 </div>
 
                 <p className="text-center text-gray-600 dark:text-gray-300 text-base mt-8">
-                    Didn’t find the answer you are looking for?{" "}
+                    Tidak menemukan jawaban yang Anda cari?{" "}
                     <a
                         href="#"
                         title=""
                         className="font-medium text-blue-600 dark:text-blue-300 transition-all duration-200 hover:text-blue-600 dark:hover:text-blue-300 focus:text-blue-700 hover:underline"
                     >
-                        Contact our support
+                        Hubungi Kontak Kami
                     </a>
                 </p>
             </div>

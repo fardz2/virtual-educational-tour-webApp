@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     icons: {
-        icon: `/vercel.svg`
+        icon: `/vercel.svg`,
     },
     title: "Beyond Your Inspiration! 🚀🌏",
     description:
@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${inter.className} bg-gray-100 dark:bg-gray-900 `}>
+            <body
+                className={`${inter.className} bg-gray-100 dark:bg-gray-900 `}
+            >
                 {children}
             </body>
         </html>

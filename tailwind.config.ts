@@ -18,7 +18,7 @@ const config: Config = {
                 tealPrim: `#088395`,
                 tealSec: `#35A29F`,
                 tertiary: `#F2F7A1`,
-            }
+            },
         },
     },
     plugins: [],

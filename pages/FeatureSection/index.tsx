@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { ClockCountdown, ChatsCircle, ArrowsOut, UsersThree, MapTrifold, Trophy } from "@phosphor-icons/react";
+import {
+    ClockCountdown,
+    ChatsCircle,
+    ArrowsOut,
+    UsersThree,
+    MapTrifold,
+    Trophy,
+} from "@phosphor-icons/react";
 
 const FeatureSection = () => {
     return (

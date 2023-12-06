@@ -8,7 +8,7 @@ const TourCard = () => {
     const id = Math.floor(Math.random() * 100) + 1;
     return (
         <>
-            <Link href={`${tourPathName}/${id}`} className="p-4 max-w-min">
+            <Link href={`${tourPathName}/${id}`} className="p-4 w-min">
                 <div className="w-60 h-60  rounded-lg">
                     <Image
                         src={`https://placehold.co/400x400/png`}
@@ -23,7 +23,7 @@ const TourCard = () => {
                         <Badge href="" text="tag1" type="" />
                         <Badge href="" text="tag2" type="" />
                     </div>
-                    <h2>
+                    <h2 className="max-w-[240px]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quibusdam, quo!
                     </h2>

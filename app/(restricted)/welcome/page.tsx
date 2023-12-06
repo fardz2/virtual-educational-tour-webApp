@@ -8,9 +8,9 @@ const WelcomePage = () => {
     return (
         <>
             <section className="bg-white">
-                <h1 className="w-full py-3 text-center bg-gradient-to-r from-blue-700 to-sky-300 text-white">
+                <h1 className="w-full py-3 text-center bg-gradient-to-r dark:from-bluePrim dark:to-tealPrim from-tealSec to-tertiary dark:text-gray-50 text-gray-900">
                     Festival Promo Akhir Tahun 2023{" "}
-                    <span className="text-white font-semibold underline">
+                    <span className="dark:text-gray-50 text-gray-900 font-semibold underline">
                         #SemarakAkhirTahun!
                     </span>
                 </h1>

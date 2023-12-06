@@ -30,7 +30,9 @@ const AppNavbar = () => {
                         <AccountButton />
                     </div>
                 </div>
-                <div className={`w-full h-16 bg-white px-5 flex justify-between items-center md:px-12 drop-shadow-md`}>
+                <div
+                    className={`w-full h-16 bg-white px-5 flex justify-between items-center md:px-12 drop-shadow-md`}
+                >
                     <div className="md:flex flex-row gap-6 hidden items-center">
                         <div>
                             <Link

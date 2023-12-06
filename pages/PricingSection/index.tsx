@@ -1,43 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import PricingCard from "@/components/PricingCard";
-import React from "react";
 import TogglePricing from "@/components/TogglePricing";
+import React from "react";
 
 const PricingSection = () => {
-    const pricingInputData = [
-        {
-            title: "Junior Plan",
-            desc: "Mulailah perjalanan edukatif Anda dengan pilihan gratis kami. Akses ke destinasi-dstination menarik tanpa biaya apa pun. Berbagai pengetahuan tanpa hambatan!",
-            price: "Free",
-            benefit: {
-                1: "Akses ke destinasi edukatif umum",
-                2: "Pembaruan reguler dan konten yang terus bertambah",
-                3: "Bergabunglah dengan komunitas dan ikuti diskusi",
-            },
-        },
-        {
-            title: "Professional Plan",
-            desc: "Upgrade pengalaman belajar Anda dengan layanan profesional kami. Dapatkan akses eksklusif ke destinasi premium, kuis tingkat lanjut, dan dukungan penuh.",
-            price: "",
-            benefit: {
-                1: "Semua fitur dari Free Plan",
-                2: "Akses ke destinasi premium dan konten eksklusif",
-                3: "Kuis dan tugas edukatif tingkat lanjut",
-                4: "Dukungan pelanggan prioritas",
-            },
-        },
-        {
-            title: "Community Plan",
-            desc: "Bagikan pengalaman belajar dengan teman, keluarga, atau rekan kerja Anda. Paket Grup kami memungkinkan kolaborasi dalam eksplorasi pengetahuan.",
-            price: "",
-            benefit: {
-                1: "Semua fitur dari Professional Plan",
-                2: "Akses bersama untuk kelompok pengguna",
-                3: "Manajemen pengguna yang mudah",
-                4: "Diskon dan penawaran khusus untuk paket grup",
-            },
-        },
-    ];
     return (
         <>
             <div className="w-full flex justify-center items-center flex-col px-5 py-6 md:px-24">
@@ -51,6 +16,7 @@ const PricingSection = () => {
                     of a group eager to collaborate, we have the perfect plan
                     for you.
                 </p>
+                <TogglePricing/>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                     <div className="divide-y divide-gray-200 bg-white rounded-lg border border-gray-200 shadow-sm hover:scale-105 duration-300 transition-all">
                         <div className="p-6 sm:px-8">
@@ -59,8 +25,9 @@ const PricingSection = () => {
                             </h2>
 
                             <p className="mt-1 text-gray-600">
-                                Mulailah perjalanan edukasi interaktif Anda dengan
-                                akses ke berbagai pengetahuan tanpa hambatan.
+                                Mulailah perjalanan edukasi interaktif Anda
+                                dengan akses ke berbagai pengetahuan tanpa
+                                hambatan.
                             </p>
 
                             <p className="mt-2 sm:mt-4">
@@ -102,7 +69,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        10 users{" "}
+                                        Akses ke destinasi dan kelas gratis{" "}
                                     </span>
                                 </li>
 
@@ -124,7 +91,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        2GB of storage{" "}
+                                        Pembaruan reguler dan konten yang terus
+                                        bertambah{" "}
                                     </span>
                                 </li>
 
@@ -146,7 +114,31 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Email support{" "}
+                                        Bergabung dengan komunitas dan ikuti
+                                        diskusi{" "}
+                                    </span>
+                                </li>
+
+                                <li className="flex items-center gap-1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="h-5 w-5 text-indigo-700"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5"
+                                        />
+                                    </svg>
+
+                                    <span className="text-gray-700">
+                                        {" "}
+                                        Analisis perkembangan belajar secara
+                                        akurat{" "}
                                     </span>
                                 </li>
 
@@ -168,7 +160,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Help center access{" "}
+                                        Kuis dan tugas edukatif tingkat lanjut{" "}
                                     </span>
                                 </li>
 
@@ -190,7 +182,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Phone support{" "}
+                                        Dukungan pelanggan prioritas 24/7{" "}
                                     </span>
                                 </li>
 
@@ -212,7 +204,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Community access{" "}
+                                        Akses ke destinasi premium dan konten
+                                        eksklusif{" "}
                                     </span>
                                 </li>
                             </ul>
@@ -275,7 +268,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        20 users{" "}
+                                        Akses ke destinasi dan kelas gratis{" "}
                                     </span>
                                 </li>
 
@@ -297,7 +290,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        5GB of storage{" "}
+                                        Pembaruan reguler dan konten yang terus
+                                        bertambah{" "}
                                     </span>
                                 </li>
 
@@ -319,7 +313,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Email support{" "}
+                                        Bergabung dengan komunitas dan ikuti
+                                        diskusi{" "}
                                     </span>
                                 </li>
 
@@ -341,7 +336,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Help center access{" "}
+                                        Analisis perkembangan belajar secara
+                                        akurat{" "}
                                     </span>
                                 </li>
 
@@ -352,18 +348,18 @@ const PricingSection = () => {
                                         viewBox="0 0 24 24"
                                         strokeWidth="1.5"
                                         stroke="currentColor"
-                                        className="h-5 w-5 text-red-700"
+                                        className="h-5 w-5 text-indigo-700"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            d="M6 18L18 6M6 6l12 12"
+                                            d="M4.5 12.75l6 6 9-13.5"
                                         />
                                     </svg>
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Phone support{" "}
+                                        Kuis dan tugas edukatif tingkat lanjut{" "}
                                     </span>
                                 </li>
 
@@ -374,18 +370,41 @@ const PricingSection = () => {
                                         viewBox="0 0 24 24"
                                         strokeWidth="1.5"
                                         stroke="currentColor"
-                                        className="h-5 w-5 text-red-700"
+                                        className="h-5 w-5 text-indigo-700"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            d="M6 18L18 6M6 6l12 12"
+                                            d="M4.5 12.75l6 6 9-13.5"
                                         />
                                     </svg>
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Community access{" "}
+                                        Dukungan pelanggan prioritas 24/7{" "}
+                                    </span>
+                                </li>
+
+                                <li className="flex items-center gap-1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="h-5 w-5 text-indigo-700"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5"
+                                        />
+                                    </svg>
+
+                                    <span className="text-gray-700">
+                                        {" "}
+                                        Akses ke destinasi premium dan konten
+                                        eksklusif{" "}
                                     </span>
                                 </li>
                             </ul>
@@ -448,7 +467,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        50 users{" "}
+                                        Akses ke destinasi dan kelas gratis{" "}
                                     </span>
                                 </li>
 
@@ -470,7 +489,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        20GB of storage{" "}
+                                        Pembaruan reguler dan konten yang terus
+                                        bertambah{" "}
                                     </span>
                                 </li>
 
@@ -492,7 +512,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Email support{" "}
+                                        Bergabung dengan komunitas dan ikuti
+                                        diskusi{" "}
                                     </span>
                                 </li>
 
@@ -514,7 +535,8 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Help center access{" "}
+                                        Analisis perkembangan belajar secara
+                                        akurat{" "}
                                     </span>
                                 </li>
 
@@ -536,7 +558,7 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Phone support{" "}
+                                        Kuis dan tugas edukatif tingkat lanjut{" "}
                                     </span>
                                 </li>
 
@@ -558,7 +580,72 @@ const PricingSection = () => {
 
                                     <span className="text-gray-700">
                                         {" "}
-                                        Community access{" "}
+                                        Dukungan pelanggan prioritas 24/7{" "}
+                                    </span>
+                                </li>
+
+                                <li className="flex items-center gap-1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="h-5 w-5 text-indigo-700"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5"
+                                        />
+                                    </svg>
+
+                                    <span className="text-gray-700">
+                                        {" "}
+                                        Akses ke destinasi premium dan konten
+                                        eksklusif{" "}
+                                    </span>
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="h-5 w-5 text-indigo-700"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5"
+                                        />
+                                    </svg>
+
+                                    <span className="text-gray-700">
+                                        {" "}
+                                        Akses bersama untuk kelompok pengguna{" "}
+                                    </span>                
+                                </li>
+                                <li className="flex items-center gap-1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="h-5 w-5 text-indigo-700"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5"
+                                        />
+                                    </svg>
+
+                                    <span className="text-gray-700">
+                                        {" "}
+                                        Manajemen terintegrasi dengan mudah dan baik{" "}
                                     </span>
                                 </li>
                             </ul>

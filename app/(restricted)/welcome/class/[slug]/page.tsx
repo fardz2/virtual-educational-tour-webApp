@@ -83,7 +83,9 @@ const page = ({ params }: { params: { slug: string } }) => {
                     </span>
                 </div>
                 <div className="w-full">
-                    <Link href={""} className="flex underline justify-end">Pagination</Link>
+                    <Link href={""} className="flex underline justify-end">
+                        Pagination
+                    </Link>
                 </div>
                 <h1 className="mt-6 text-xl font-bold">
                     Rekomendasi Tour Lain Untuk Anda

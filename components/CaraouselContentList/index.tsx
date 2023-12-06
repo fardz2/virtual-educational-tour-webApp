@@ -1,52 +1,74 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import TourCard from "../TourCard";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import ClassCard from "../ClassCard";
 
 const CarouselContentList = () => {
-    const [cards, setCards] = useState<React.ReactElement[]>([]);
-    const [current, setCurrent] = useState(0);
-    const [slideDirection, setSlideDirection] = useState<
-        "right" | "left" | undefined
-    >("left");
-
-    const cardsPerPage = 4;
-    const duplicateCards: React.ReactElement[] = Array.from(
-        { length: 10 },
-        (_, i) => <TourCard key={i} />,
-    );
-
-    const handleNext = () => {
-        setSlideDirection("left");
-        setCurrent((prevPage) => prevPage + 1);
-    };
-
-    const handlePrev = () => {
-        setSlideDirection("right");
-        setCurrent((prevPage) => prevPage - 1);
-    };
-
-    useEffect(() => {
-        setCards(duplicateCards);
-    }, []);
-
     return (
-        <div className="flex flex-row items-center justify-center h-[400px]">
-            <button onClick={handlePrev}>prev</button>
-            <div className="flex flex-row items-center justify-center h-[400px]">
-                {cards.map((card, index) => (
-                    <div
-                        className={`w-full h-full ${
-                            current === index ? "block" : "hidden"
-                        }`}
-                        key={index}
-                    >
-                        <TourCard />
-                    </div>
-                ))}
-            </div>
-            <button onClick={handleNext}>next</button>
-        </div>
+        <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlay
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className="py-4"
+            containerClass="container-with-dots"
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            partialVisbile
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+                desktop: {
+                    breakpoint: {
+                        max: 3000,
+                        min: 1024,
+                    },
+                    items: 3,
+                    partialVisibilityGutter: 40,
+                },
+                mobile: {
+                    breakpoint: {
+                        max: 768,
+                        min: 0,
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30,
+                },
+                tablet: {
+                    breakpoint: {
+                        max: 1024,
+                        min: 768,
+                    },
+                    items: 2,
+                    partialVisibilityGutter: 30,
+                },
+            }}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={true}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+            
+        >
+            <TourCard/>
+            <TourCard/>
+            <TourCard/>
+            <TourCard/>
+        </Carousel>
     );
 };
 

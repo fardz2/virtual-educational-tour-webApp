@@ -24,7 +24,9 @@ export default function Home() {
                 <FeatureSection />
             </section>
             {/* Feature Section End */}
-            <section className="w-full bg-white h-min">
+            <section className="w-full bg-gray-50 h-min px-12 py-6">
+                <h1 className="pt-6 pb-2 text-4xl font-bold text-gray-50 dark:text-gray-900 max-w-2xl">Dive into the heart of knowledge with our immersive educational tours.</h1>
+                <p className="">Each tour is a curated journey, unlocking the secrets of historical landmarks, scientific marvels, and cultural wonders.</p>
                 <CarouselContentList />
             </section>
 

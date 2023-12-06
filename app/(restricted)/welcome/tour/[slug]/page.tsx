@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 
 const page = ({ params }: { params: { slug: string } }) => {
-    
     return (
         <>
             <AppNavbar />
@@ -24,22 +23,73 @@ const page = ({ params }: { params: { slug: string } }) => {
                     <hr />
                 </div>
                 <div className="w-full h-80 bg-slate-300">
-                    <Image src={``} width={400} height={400} alt="gambar blog"/>
+                    <Image
+                        src={``}
+                        width={400}
+                        height={400}
+                        alt="gambar blog"
+                    />
                 </div>
                 <div>
-                    <span className="mb-4">{"____"}Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium tenetur, nam ipsa iure a dolorum recusandae dolore explicabo. Culpa quod molestiae natus quasi magni perspiciatis? Ea modi natus aliquam, assumenda unde placeat! Placeat ratione asperiores numquam saepe laborum recusandae. Aspernatur quod qui provident alias quisquam, sed dignissimos impedit deserunt, vero sunt consequuntur quidem vitae delectus itaque! Ullam fugiat molestiae facere quibusdam odit, aperiam odio atque esse molestias animi! Molestias incidunt quae sint officiis nisi. Eos voluptatum optio harum distinctio porro soluta quod non possimus quas odio doloribus dolore quidem nemo tenetur, esse iure dolorem ex natus accusantium, sed sit molestias!</span>
+                    <span className="mb-4">
+                        {"____"}Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Accusantium tenetur, nam ipsa iure a
+                        dolorum recusandae dolore explicabo. Culpa quod
+                        molestiae natus quasi magni perspiciatis? Ea modi natus
+                        aliquam, assumenda unde placeat! Placeat ratione
+                        asperiores numquam saepe laborum recusandae. Aspernatur
+                        quod qui provident alias quisquam, sed dignissimos
+                        impedit deserunt, vero sunt consequuntur quidem vitae
+                        delectus itaque! Ullam fugiat molestiae facere quibusdam
+                        odit, aperiam odio atque esse molestias animi! Molestias
+                        incidunt quae sint officiis nisi. Eos voluptatum optio
+                        harum distinctio porro soluta quod non possimus quas
+                        odio doloribus dolore quidem nemo tenetur, esse iure
+                        dolorem ex natus accusantium, sed sit molestias!
+                    </span>
                     <br />
-                    <span>____Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium tenetur, nam ipsa iure a dolorum recusandae dolore explicabo. Culpa quod molestiae natus quasi magni perspiciatis? Ea modi natus aliquam, assumenda unde placeat! Placeat ratione asperiores numquam saepe laborum recusandae. Aspernatur quod qui provident alias quisquam, sed dignissimos impedit deserunt, vero sunt consequuntur quidem vitae delectus itaque! Ullam fugiat molestiae facere quibusdam odit, aperiam odio atque esse molestias animi! Molestias incidunt quae sint officiis nisi. Eos voluptatum optio harum distinctio porro soluta quod non possimus quas odio doloribus dolore quidem nemo tenetur, esse iure dolorem ex natus accusantium, sed sit molestias!</span>
+                    <span>
+                        ____Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Accusantium tenetur, nam ipsa iure a dolorum
+                        recusandae dolore explicabo. Culpa quod molestiae natus
+                        quasi magni perspiciatis? Ea modi natus aliquam,
+                        assumenda unde placeat! Placeat ratione asperiores
+                        numquam saepe laborum recusandae. Aspernatur quod qui
+                        provident alias quisquam, sed dignissimos impedit
+                        deserunt, vero sunt consequuntur quidem vitae delectus
+                        itaque! Ullam fugiat molestiae facere quibusdam odit,
+                        aperiam odio atque esse molestias animi! Molestias
+                        incidunt quae sint officiis nisi. Eos voluptatum optio
+                        harum distinctio porro soluta quod non possimus quas
+                        odio doloribus dolore quidem nemo tenetur, esse iure
+                        dolorem ex natus accusantium, sed sit molestias!
+                    </span>
                     <br />
-                    <span>____Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium tenetur, nam ipsa iure a dolorum recusandae dolore explicabo. Culpa quod molestiae natus quasi magni perspiciatis? Ea modi natus aliquam, assumenda unde placeat! Placeat ratione asperiores numquam saepe laborum recusandae. Aspernatur quod qui provident alias quisquam, sed dignissimos impedit deserunt, vero sunt consequuntur quidem vitae delectus itaque! Ullam fugiat molestiae facere quibusdam odit, aperiam odio atque esse molestias animi! Molestias incidunt quae sint officiis nisi. Eos voluptatum optio harum distinctio porro soluta quod non possimus quas odio doloribus dolore quidem nemo tenetur, esse iure dolorem ex natus accusantium, sed sit molestias!</span>
+                    <span>
+                        ____Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Accusantium tenetur, nam ipsa iure a dolorum
+                        recusandae dolore explicabo. Culpa quod molestiae natus
+                        quasi magni perspiciatis? Ea modi natus aliquam,
+                        assumenda unde placeat! Placeat ratione asperiores
+                        numquam saepe laborum recusandae. Aspernatur quod qui
+                        provident alias quisquam, sed dignissimos impedit
+                        deserunt, vero sunt consequuntur quidem vitae delectus
+                        itaque! Ullam fugiat molestiae facere quibusdam odit,
+                        aperiam odio atque esse molestias animi! Molestias
+                        incidunt quae sint officiis nisi. Eos voluptatum optio
+                        harum distinctio porro soluta quod non possimus quas
+                        odio doloribus dolore quidem nemo tenetur, esse iure
+                        dolorem ex natus accusantium, sed sit molestias!
+                    </span>
                 </div>
-                <h1 className="mt-6 text-xl font-bold">Rekomendasi Tour Lain Untuk Anda</h1>
+                <h1 className="mt-6 text-xl font-bold">
+                    Rekomendasi Tour Lain Untuk Anda
+                </h1>
                 <div className="flex flex-wrap justify-between">
-                    
-                    <TourCard/>
-                    <TourCard/>
-                    <TourCard/>
-                    <TourCard/>
+                    <TourCard />
+                    <TourCard />
+                    <TourCard />
+                    <TourCard />
                 </div>
             </section>
         </>

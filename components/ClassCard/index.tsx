@@ -9,9 +9,9 @@ const ClassCard = () => {
         <>
             <Link
                 href={`${classPathName}/${id}`}
-                className="max-w-min border rounded-lg"
+                className="max-w-min border border-gray-100 rounded-lg"
             >
-                <div className="w-72 h-60 bg-white rounded-t-lg"></div>
+                <div className="w-72 h-60 bg-gray-100 rounded-t-lg"></div>
                 <div className="flex flex-col gap-2 p-4">
                     <h1 className="text-2xl font-bold">Title</h1>
                     <div className="flex flex-row gap-1">
