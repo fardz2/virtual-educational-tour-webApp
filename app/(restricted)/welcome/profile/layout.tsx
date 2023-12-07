@@ -35,20 +35,20 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
                         </div>
                         <ul className="flex flex-col rounded-lg border">
                             <li className="bg-white px-4 py-3 rounded-t-lg ">
-                                <Link href={`${pathNameNow}`}>Profil Akun</Link>
+                                <Link href={`/welcome/profile`}>Profil Akun</Link>
                             </li>
                             <li className="bg-white px-4 py-3">
-                                <Link href={`${pathNameNow}/dashboard`}>
+                                <Link href={`/welcome/profile/analytic`}>
                                     Analisis Saya
                                 </Link>
                             </li>
                             <li className="bg-white px-4 py-3">
-                                <Link href={`${pathNameNow}/saved-forum`}>
+                                <Link href={`/welcome/profile/saved`}>
                                     Konten Tersimpan
                                 </Link>
                             </li>
                             <li className="bg-white px-4 py-3">
-                                <Link href={`${pathNameNow}/saved-forum`}>
+                                <Link href={`/welcome/profile/edit/password`}>
                                     Ganti Kata Sandi
                                 </Link>
                             </li>

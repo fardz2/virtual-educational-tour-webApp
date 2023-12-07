@@ -151,7 +151,7 @@ const RegisterPage = () => {
                                         <p className="mt-4 text-sm text-center text-gray-500 sm:mt-0">
                                             Already have an account?
                                             <Link
-                                                href="#"
+                                                href="/welcome"
                                                 className="text-gray-700 underline"
                                             >
                                                 Log in

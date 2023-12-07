@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const PersonalContact = () => {
+const PasswordPage = () => {
     const Router = useRouter();
     return (
         <div className="p-6 bg-white border rounded-lg">
@@ -15,40 +15,12 @@ const PersonalContact = () => {
             <hr className="my-4" />
             <form className="flex flex-col">
                 <label
-                    htmlFor="email"
+                    htmlFor="oldPassowrd"
                     className="block text-sm font-medium text-gray-950"
                 >
-                    Email
+                    Kata sandi sekarang
                     <input
-                        type="email"
-                        placeholder="Elsam Rafi Saputra"
-                        className="mt-1 block w-full placeholder-gray-400/70 placeholder:font-normal rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-700 focus:border-blue-400 focus:outline-none"
-                    />
-                    <p className="mt-2 font-normal opacity-0 text-xs text-gray-400 dark:text-gray-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                </label>
-                <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-950"
-                >
-                    Nomor ponsel
-                    <input
-                        type="email"
-                        placeholder="Nama kota atau kabupaten"
-                        className="mt-1 block w-full placeholder-gray-400/70 placeholder:font-normal rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-700 focus:border-blue-400 focus:outline-none"
-                    />
-                    <p className="mt-2 font-normal opacity-0 text-xs text-gray-400 dark:text-gray-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                </label>
-                <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-950"
-                >
-                    Nama orang terpercaya
-                    <input
-                        type="email"
+                        type="password"
                         placeholder=""
                         className="mt-1 block w-full placeholder-gray-400/70 placeholder:font-normal rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-700 focus:border-blue-400 focus:outline-none"
                     />
@@ -57,12 +29,12 @@ const PersonalContact = () => {
                     </p>
                 </label>
                 <label
-                    htmlFor="email"
+                    htmlFor="newPassword"
                     className="block text-sm font-medium text-gray-950"
                 >
-                    Status orang tersebut dengan anda
+                    Kata sandi baru
                     <input
-                        type="email"
+                        type="password"
                         placeholder=""
                         className="mt-1 block w-full placeholder-gray-400/70 placeholder:font-normal rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-700 focus:border-blue-400 focus:outline-none"
                     />
@@ -71,13 +43,13 @@ const PersonalContact = () => {
                     </p>
                 </label>
                 <label
-                    htmlFor="email"
+                    htmlFor="confirmNewPassword"
                     className="block text-sm font-medium text-gray-950"
                 >
-                    Kontak yang dapat dihubungi
+                    Konfirmasi kata sandi baru
                     <input
                         type="email"
-                        placeholder="SD Negeri 1 Buah Batu"
+                        placeholder=""
                         className="mt-1 block w-full placeholder-gray-400/70 placeholder:font-normal rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-700 focus:border-blue-400 focus:outline-none"
                     />
                     <p className="mt-2 font-normal opacity-0 text-xs text-gray-400 dark:text-gray-600">
@@ -89,4 +61,4 @@ const PersonalContact = () => {
     );
 };
 
-export default PersonalContact;
+export default PasswordPage;

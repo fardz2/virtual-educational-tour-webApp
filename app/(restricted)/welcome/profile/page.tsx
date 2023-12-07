@@ -1,5 +1,6 @@
 "use client";
 
+import { Info } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -65,8 +66,13 @@ const ProfilePage = () => {
                 </section>
                 <hr />
                 <section>
-                    <div className="bg-gray-100 py-4 px-6 m-6 rounded">
-                        Ini info aja{" "}
+                    <div className="bg-gray-100 py-4 px-4 m-6 rounded flex flex-row justify-start items-start gap-2">
+                        <Info size={40} className="text-gray-900 "/>
+                        <p className="text-gray-900 py-2">
+                            Personalisasi perjalanan edukasi Anda di EduVenturer
+                            dengan mengelola pengaturan profil Anda untuk
+                            mendapatkan pengalaman pembelajaran yang optimal
+                        </p>
                     </div>
                     <div className="flex flex-col gap-6 px-6">
                         <Link
@@ -80,9 +86,6 @@ const ProfilePage = () => {
                             className="font-medium"
                         >
                             Kontak Pribadi
-                        </Link>
-                        <Link href={""} className="font-medium">
-                            Akun Media Sosial
                         </Link>
                     </div>
                 </section>
