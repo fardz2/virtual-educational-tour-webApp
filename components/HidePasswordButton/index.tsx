@@ -5,10 +5,13 @@ import React, { useState } from "react";
 interface passwordProps {
     id: string;
     label: string;
+    register: any;
+    error: any;
 }
 
 const HidePasswordButton = (props: passwordProps) => {
     const [showPassword, setShowPassword] = useState(false);
+    const { onChange, onBlur, name, ref } = props.register;
 
     return (
         <div className="">
@@ -22,17 +25,26 @@ const HidePasswordButton = (props: passwordProps) => {
             <div className="relative w-full h-min">
                 <input
                     type={`${showPassword ? "password" : "text"}`}
-                    id={props.id}
-                    name={props.label}
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    name={name}
+                    ref={ref}
                     className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
                 <button
-                    onClick={() => {setShowPassword((prev) => !prev)}}
+                    onClick={() => {
+                        setShowPassword((prev) => !prev);
+                    }}
                     className={`absolute top-1 right-6 translate-x-1/2 translate-y-1/2`}
                 >
                     {showPassword ? "show" : "hide"}
                 </button>
             </div>
+            {props.label == "Password"
+                ? props.error.password && (
+                      <p role="alert">{props.error.password.message}</p>
+                  )
+                : ""}
         </div>
     );
 };

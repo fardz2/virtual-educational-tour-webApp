@@ -1,8 +1,59 @@
-import HidePasswordButton from "@/components/HidePasswordButton";
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import YupPassword from "yup-password";
+import * as yup from "yup";
+import Link from "next/link";
+import HidePasswordButton from "@/components/HidePasswordButton";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+YupPassword(yup);
+type FormData = {
+    email: string;
+    password: string;
+};
+const schema = yup
+    .object({
+        email: yup.string().email().required("Email is a required field"),
+        password: yup
+            .string()
+            .min(8, "Password must be at least 8 characters")
+            .minUppercase(
+                1,
+                "Password must contain at least 1 uppercase letter",
+            )
+            .minSymbols(1, "Password must contain at least 1 symbol")
+            .required("Password is a required field"),
+    })
+    .required();
 
 const LoginPage = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<FormData>({
+        resolver: yupResolver(schema),
+    });
+    const router = useRouter();
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        try {
+            await signIn("credentials", {
+                email: data.email,
+                password: data.password,
+                redirect: false,
+            });
+            router.replace("/welcome");
+        } catch (error: any) {
+            if (error.response.data.status == 404) {
+            } else {
+                return alert(error.response.data.errors);
+            }
+        }
+    };
     return (
         <>
             <section>
@@ -41,6 +92,7 @@ const LoginPage = () => {
                                 <form
                                     action="#"
                                     className="mt-8 grid grid-cols-6 gap-6"
+                                    onSubmit={handleSubmit(onSubmit)}
                                 >
                                     <div className="col-span-6">
                                         <label
@@ -52,18 +104,18 @@ const LoginPage = () => {
 
                                         <input
                                             type="text"
-                                            id="FirstName"
-                                            name="first_name"
+                                            id="username"
                                             className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                            {...register("email")}
                                         />
                                     </div>
-
-                                    
 
                                     <div className="col-span-6">
                                         <HidePasswordButton
                                             id="password"
                                             label="Password"
+                                            register={register("password")}
+                                            error={errors}
                                         />
                                     </div>
 
@@ -91,7 +143,7 @@ const LoginPage = () => {
 
                                     <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                                         <button className="invalid:opacity-30 inline-block w-full md:w-auto shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                                            Create an account
+                                            Login
                                         </button>
 
                                         <p className="mt-4 text-sm text-center text-gray-500 sm:mt-0">

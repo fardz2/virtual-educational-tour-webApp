@@ -1,13 +1,68 @@
 "use client";
 
 import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import YupPassword from "yup-password";
+import * as yup from "yup";
 import Link from "next/link";
 import HidePasswordButton from "@/components/HidePasswordButton";
-
+import { error } from "console";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+YupPassword(yup);
+type FormData = {
+    username: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+};
+const schema = yup
+    .object({
+        username: yup.string().required("Name is a required field"),
+        email: yup.string().email().required("Email is a required field"),
+        password: yup
+            .string()
+            .min(8, "Password must be at least 8 characters")
+            .minUppercase(
+                1,
+                "Password must contain at least 1 uppercase letter",
+            )
+            .minSymbols(1, "Password must contain at least 1 symbol")
+            .required("Password is a required field"),
+        confirmPassword: yup
+            .string()
+            .oneOf([yup.ref("password")], "Confirm Password must match")
+            .required("Confirm Password is a required field"),
+    })
+    .required();
 const RegisterPage = () => {
-    const handleSubmit = () => {
-        console.log("berhasil")
-    }
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<FormData>({
+        resolver: yupResolver(schema),
+    });
+    const router = useRouter();
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        try {
+            const headers = {
+                "Content-Type": "application/json",
+            };
+            const jsonData = JSON.stringify(data);
+            await axios.post("http://127.0.0.1:8000/api/register", jsonData, {
+                headers,
+            });
+            router.replace("/login");
+        } catch (error: any) {
+            if (error.response.data.status == 404) {
+                return alert(error.response.data.message);
+            } else {
+                return alert(error.response.data.errors.email);
+            }
+        }
+    };
 
     return (
         <>
@@ -47,7 +102,7 @@ const RegisterPage = () => {
                                 <form
                                     action="#"
                                     className="mt-8 grid grid-cols-6 gap-6"
-                                    onSubmit={handleSubmit}
+                                    onSubmit={handleSubmit(onSubmit)}
                                 >
                                     <div className="col-span-6">
                                         <label
@@ -59,10 +114,15 @@ const RegisterPage = () => {
 
                                         <input
                                             type="text"
-                                            id="FirstName"
-                                            name="first_name"
+                                            id="username"
                                             className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                            {...register("username")}
                                         />
+                                        {errors.username && (
+                                            <p role="alert">
+                                                {errors.username.message}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="col-span-6">
@@ -76,23 +136,39 @@ const RegisterPage = () => {
                                         <input
                                             type="email"
                                             id="Email"
-                                            name="email"
                                             className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                            {...register("email")}
                                         />
+                                        {errors.email && (
+                                            <p role="alert">
+                                                {errors.email.message}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3 relative">
                                         <HidePasswordButton
                                             id="password"
                                             label="Password"
+                                            register={register("password")}
+                                            error={errors}
                                         />
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3">
                                         <HidePasswordButton
-                                            id="password-confrim"
-                                            label="Confirmation Password"
+                                            id="confirmPassword"
+                                            label="Confirm Password"
+                                            register={register(
+                                                "confirmPassword",
+                                            )}
+                                            error={errors}
                                         />
+                                        {errors.confirmPassword && (
+                                            <p role="alert">
+                                                {errors.confirmPassword.message}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="col-span-6">

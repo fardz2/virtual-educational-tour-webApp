@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { UserCircle, List } from "@phosphor-icons/react";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 const AccountButton = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,13 +72,17 @@ const AccountButton = () => {
                                 </Link>
                             </li> */}
                             <li>
-                                <Link
-                                    href="/logout"
+                                <button
                                     className="block px-4 py-2 text-red-700 rounded-b-lg hover:bg-gray-100"
-                                    onClick={closeDropdown}
+                                    onClick={() =>
+                                        signOut({
+                                            redirect: true,
+                                            callbackUrl: "/",
+                                        })
+                                    }
                                 >
                                     Log Out
-                                </Link>
+                                </button>
                             </li>
                         </ul>
                     </div>
