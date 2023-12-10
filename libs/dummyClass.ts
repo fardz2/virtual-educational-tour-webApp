@@ -1,52 +1,84 @@
 type VirtualClassData = {
+    id: number;
     title: string;
     description: string;
-    tag: string;
-    id: number;
+    tag: tagType;
+    userType: string;
     image: string;
+};
+
+type tagType = {
+    category: string;
+    level: string;
+    location: string;
 };
 
 const virtualClasses: VirtualClassData[] = [
     {
+        id: 1,
         title: "Pengenalan Koding Dasar",
         description:
             "Pelajari dasar-dasar pemrograman melalui kelas virtual ini.",
-        tag: "Pemrograman",
-        id: 1,
+        tag: {
+            category: "",
+            level: "",
+            location: "",
+        },
+        userType: "",
         image: require("@/public/next.svg"),
     },
     {
+        id: 2,
         title: "Seni Desain Grafis",
         description:
             "Tingkatkan keterampilan desain grafis Anda dengan kelas ini.",
-        tag: "Desain",
-        id: 2,
+        tag: {
+            category: "",
+            level: "",
+            location: "",
+        },
+        userType: "",
         image: require("@/public/next.svg"),
     },
     {
+        id: 3,
         title: "Strategi Pemasaran Digital",
         description:
             "Pelajari strategi pemasaran digital yang efektif melalui kelas ini.",
-        tag: "Pemasaran",
-        id: 3,
+        tag: {
+            category: "",
+            level: "",
+            location: "",
+        },
+        userType: "",
         image: require("@/public/next.svg"),
     },
     {
+        id: 4,
         title: "Keterampilan Presentasi Efektif",
         description:
             "Perbaiki keterampilan presentasi Anda melalui kelas virtual ini.",
-        tag: "Keterampilan",
-        id: 4,
+        tag: {
+            category: "",
+            level: "",
+            location: "",
+        },
+        userType: "",
         image: require("@/public/next.svg"),
     },
     {
+        id: 5,
         title: "Ekonomi untuk Pemula",
         description: "Pahami konsep dasar ekonomi melalui kelas virtual ini.",
-        tag: "Ekonomi",
-        id: 5,
+        tag: {
+            category: "",
+            level: "",
+            location: "",
+        },
+        userType: "",
         image: require("@/public/next.svg"),
     },
     // ... dan seterusnya
 ];
 
-export default virtualClasses
+export default virtualClasses;

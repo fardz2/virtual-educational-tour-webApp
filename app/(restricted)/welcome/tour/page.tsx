@@ -7,17 +7,7 @@ import virtualTours from "@/libs/dummyTour";
 const TourPage = () => {
     return (
         <>
-            <section className="bg-gray-50">
-                <AppNavbar />
-                <section className="min-h-screen grid md:gap-6 grid-cols-1 md:grid-cols-11 px-5 md:px-12">
-                    <div className="md:col-span-8 ">
-                        <TourSection />
-                    </div>
-                    <div className="md:col-span-3">
-                        <ForumSection />
-                    </div>
-                </section>
-            </section>
+            <TourSection/>
         </>
     );
 };

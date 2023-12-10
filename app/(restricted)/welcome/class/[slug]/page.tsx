@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const page = ({ params }: { params: { slug: string } }) => {
+
     return (
         <>
-            <AppNavbar />
-            <section className="flex flex-col min-h-screen bg-white px-12 max-w-5xl mx-auto pt-12 gap-4 py-12">
+            <section className="flex flex-col min-h-screen bg-white px-4 col-span-8 mx-auto pt-12 gap-4 py-12">
                 <h1 className="text-4xl font-bold">
                     Ini Lorem Ipsum Dolor Si Amet Itulah Pokoknya Ini Judul
                 </h1>
@@ -91,10 +91,6 @@ const page = ({ params }: { params: { slug: string } }) => {
                     Rekomendasi Tour Lain Untuk Anda
                 </h1>
                 <div className="flex flex-wrap justify-between gap-6">
-                    <ClassCard />
-                    <ClassCard />
-                    <ClassCard />
-                    <ClassCard />
                 </div>
             </section>
         </>

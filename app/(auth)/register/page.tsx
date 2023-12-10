@@ -1,7 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import HidePasswordButton from "@/components/HidePasswordButton";
 
 const RegisterPage = () => {
+    const handleSubmit = () => {
+        console.log("berhasil")
+    }
+
     return (
         <>
             <section>
@@ -40,35 +47,20 @@ const RegisterPage = () => {
                                 <form
                                     action="#"
                                     className="mt-8 grid grid-cols-6 gap-6"
+                                    onSubmit={handleSubmit}
                                 >
-                                    <div className="col-span-6 sm:col-span-3">
+                                    <div className="col-span-6">
                                         <label
                                             htmlFor="FirstName"
                                             className="block text-sm font-medium text-gray-700"
                                         >
-                                            First Name
+                                            Username
                                         </label>
 
                                         <input
                                             type="text"
                                             id="FirstName"
                                             name="first_name"
-                                            className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                        />
-                                    </div>
-
-                                    <div className="col-span-6 sm:col-span-3">
-                                        <label
-                                            htmlFor="LastName"
-                                            className="block text-sm font-medium text-gray-700"
-                                        >
-                                            Last Name
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            id="LastName"
-                                            name="last_name"
                                             className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                         />
                                     </div>
@@ -89,35 +81,17 @@ const RegisterPage = () => {
                                         />
                                     </div>
 
-                                    <div className="col-span-6 sm:col-span-3">
-                                        <label
-                                            htmlFor="Password"
-                                            className="block text-sm font-medium text-gray-700"
-                                        >
-                                            Password
-                                        </label>
-
-                                        <input
-                                            type="password"
-                                            id="Password"
-                                            name="password"
-                                            className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    <div className="col-span-6 sm:col-span-3 relative">
+                                        <HidePasswordButton
+                                            id="password"
+                                            label="Password"
                                         />
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3">
-                                        <label
-                                            htmlFor="PasswordConfirmation"
-                                            className="block text-sm font-medium text-gray-700"
-                                        >
-                                            Password Confirmation
-                                        </label>
-
-                                        <input
-                                            type="password"
-                                            id="PasswordConfirmation"
-                                            name="password_confirmation"
-                                            className="mt-1 w-full h-11 rounded-md border border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                        <HidePasswordButton
+                                            id="password-confrim"
+                                            label="Confirmation Password"
                                         />
                                     </div>
 
@@ -144,14 +118,14 @@ const RegisterPage = () => {
                                     </div>
 
                                     <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                                        <button className="inline-block w-full md:w-auto shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                                        <button className="invalid:opacity-30 inline-block w-full md:w-auto shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                                             Create an account
                                         </button>
 
                                         <p className="mt-4 text-sm text-center text-gray-500 sm:mt-0">
                                             Already have an account?
                                             <Link
-                                                href="/welcome"
+                                                href="/login"
                                                 className="text-gray-700 underline"
                                             >
                                                 Log in
@@ -159,12 +133,22 @@ const RegisterPage = () => {
                                             .
                                         </p>
                                     </div>
-                                    <hr className="w-full h-full" />
-                                    <div className="flex flex-row gap-4 mt-4">
-                                        <Link href={"/"} className={``}>
+                                    <div className="col-span-6 flex flex-row justify-center items-center">
+                                        <hr className="" />
+                                        <p>or</p>
+                                        <hr className="" />
+                                    </div>
+                                    <div className="col-span-6 grid grid-cols-2 gap-4 mt-4">
+                                        <Link
+                                            href={"/"}
+                                            className={`mt-1 h-11 flex justify-center items-center rounded border border-gray-200 bg-white text-sm text-gray-700 shadow-sm`}
+                                        >
                                             Google
                                         </Link>
-                                        <Link href={"/"} className={``}>
+                                        <Link
+                                            href={"/"}
+                                            className={`mt-1 h-11 flex justify-center items-center rounded border border-gray-200 bg-white text-sm text-gray-700 shadow-sm`}
+                                        >
                                             Microsoft
                                         </Link>
                                         <Link href={"/"} className={``}></Link>

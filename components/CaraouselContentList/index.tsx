@@ -5,6 +5,7 @@ import TourCard from "../TourCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ClassCard from "../ClassCard";
+import virtualTours from "@/libs/dummyTour";
 
 const CarouselContentList = () => {
     return (
@@ -64,10 +65,9 @@ const CarouselContentList = () => {
             swipeable
             
         >
-            <TourCard/>
-            <TourCard/>
-            <TourCard/>
-            <TourCard/>
+            {virtualTours.slice(0,5).map((input, index) => (
+                <TourCard key={index} id={input.id} image={input.image} description={input.description} title={input.title} tag={input.tag.category}/>
+            ))}
         </Carousel>
     );
 };

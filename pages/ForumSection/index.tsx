@@ -8,6 +8,7 @@ const ForumSection = () => {
                 <button className="w-full text-center py-2.5 border shadow-sm rounded-lg bg-white font-medium hover:opacity-90">
                     Add Topics
                 </button>
+                <h1 className="mt-6 font-bold text-2xl">Top 10 Article This Month</h1>
                 <div className="flex flex-col gap-4 mt-4">
                     <ForumCard />
                     <ForumCard />

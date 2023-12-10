@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import SearchBar from "@/components/SearchBar";
 import React from "react";
 import Link from "next/link";
@@ -19,11 +20,11 @@ const AppNavbar = () => {
 
     return (
         <>
-            <nav className="w-full sticky top-0">
+            <nav className="w-full sticky top-0 z-40">
                 <div className="w-full h-16 bg-white px-5 md:px-12 border-b flex justify-between items-center">
-                    <div className="px-4 font-semibold text-blue-600">
+                    <Link href={`/welcome`} className="px-4 font-semibold text-blue-600">
                         EduVenturer
-                    </div>
+                    </Link>
                     <div className="flex flex-row gap-4 items-center h-min">
                         <Sun size={24} />
                         <Globe size={24} />
@@ -38,7 +39,7 @@ const AppNavbar = () => {
                             <Link
                                 href={`${pathName}/tour`}
                                 className={`flex flex-row gap-1 items-center px-4 py-2 hover:bg-gray-100 rounded-lg ${
-                                    pathNameNow === "/welcome/tour"
+                                    pathNameNow === `/welcome/tour`
                                         ? "bg-blue-100 text-blue-700"
                                         : ""
                                 }`}
@@ -51,7 +52,7 @@ const AppNavbar = () => {
                             <Link
                                 href={`${pathName}/class`}
                                 className={`flex flex-row gap-1 items-center px-4 py-2 hover:bg-gray-100 rounded-lg ${
-                                    pathNameNow === "/welcome/class"
+                                    pathNameNow === "/welcome/class" 
                                         ? "bg-blue-100 text-blue-700"
                                         : ""
                                 }`}
