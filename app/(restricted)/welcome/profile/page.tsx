@@ -1,10 +1,13 @@
 "use client";
 
 import { Info } from "@phosphor-icons/react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
 const ProfilePage = () => {
+    const { data: session } = useSession()
+
     return (
         <>
             <div className="rounded-lg bg-white py-6 border">

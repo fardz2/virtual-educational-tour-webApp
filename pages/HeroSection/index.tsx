@@ -28,7 +28,7 @@ const HeroSection = () => {
                     </div>
                     <div className="flex justify-end items-end">
                         <Image
-                            src={"/heroImage.png"}
+                            src={""}
                             width={540}
                             height={540}
                             alt="Virtual Reality"

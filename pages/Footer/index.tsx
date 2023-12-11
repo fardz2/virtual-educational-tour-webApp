@@ -283,19 +283,10 @@ const Footer = () => {
                                 </span>
 
                                 <Link
-                                    className="inline-block text-blue-600 dark:text-blue-300 dark:hover:text-blue-300/75 underline transition hover:text-blue-600/75"
+                                    className="inline-block text-blue-600 dark:text-blue-300 dark:hover:text-blue-300 hover:underline transition hover:text-blue-600/75"
                                     href="/"
                                 >
-                                    Terms & Conditions
-                                </Link>
-
-                                <span>&middot;</span>
-
-                                <Link
-                                    className="inline-block text-blue-600 dark:text-blue-300 dark:hover:text-blue-300/75 underline transition hover:text-blue-600/75"
-                                    href="/"
-                                >
-                                    Privacy Policy
+                                    Terms & Conditions and Privacy Policy
                                 </Link>
                             </p>
 

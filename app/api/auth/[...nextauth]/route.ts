@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 const authOptions: NextAuthOptions = {
     session: {
@@ -47,17 +48,20 @@ const authOptions: NextAuthOptions = {
                         };
                         console.log(resRet);
                         return resRet;
-                    }else {
-                
+                    } else {
                         // Handle non-successful response here, return an appropriate JSON response.
-                       throw new Error("gagal")
-                      }
+                        throw new Error("gagal");
+                    }
                 } catch (error) {
-                    throw new Error("gagal")
+                    throw new Error("gagal");
                 }
                 return null;
             },
         }),
+        // GoogleProvider({
+        //     clientId: process.env.GOOGLE_CLIENT_ID,
+        //     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        // }),
     ],
     callbacks: {
         async jwt({ token, account, user }: any) {

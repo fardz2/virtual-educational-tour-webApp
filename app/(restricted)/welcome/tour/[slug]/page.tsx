@@ -3,6 +3,7 @@ import TourCard from "@/components/TourCard";
 import Image from "next/image";
 import React from "react";
 import virtualTours from "@/libs/dummyTour";
+import RekomendasiTour from "@/pages/RekomenTurSection";
 
 const Page = ({ params }: { params: { slug: string } }) => {
     return (
@@ -83,10 +84,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                         dolorem ex natus accusantium, sed sit molestias!
                     </span>
                 </div>
-                <h1 className="mt-6 text-xl font-bold">
-                    Rekomendasi Tour Lain Untuk Anda
-                </h1>
-                <div className="flex flex-wrap justify-between"></div>
+                <RekomendasiTour />
             </section>
         </>
     );
