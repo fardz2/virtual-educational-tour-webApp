@@ -2,6 +2,7 @@
 
 import AppNavbar from "@/components/Navigation/AppNavbar";
 import { getServerSession } from "next-auth";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,9 +10,10 @@ import { useEffect } from "react";
 
 const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
     const pathNameNow = usePathname();
+    const { data: session, status } = useSession();
 
     // const user =  getServerSession()
-    
+
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`bg-gray-50 `}>
@@ -28,7 +30,7 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
                             />
                             <div className="flex flex-col">
                                 <h1 className="text-xl font-bold">
-                                    Elsam Rafi Saputra
+                                    {session?.user.name}
                                 </h1>
                                 <p className="text-gray-600 font-normal">
                                     Mahasiswa
@@ -40,25 +42,42 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
                         </div>
                         <ul className="flex flex-col rounded-lg border">
                             <li className="bg-white px-4 py-3 rounded-t-lg hover:bg-gray-100">
-                                <Link href={`/welcome/profile`} className="font-medium">Profil Akun</Link>
+                                <Link
+                                    href={`/welcome/profile`}
+                                    className="font-medium"
+                                >
+                                    Profil Akun
+                                </Link>
                             </li>
                             <li className="bg-white px-4 py-3 hover:bg-gray-100">
-                                <Link href={`/welcome/profile/analytic`} className="font-medium">
+                                <Link
+                                    href={`/welcome/profile/analytic`}
+                                    className="font-medium"
+                                >
                                     Analisis Saya
                                 </Link>
                             </li>
                             <li className="bg-white px-4 py-3 hover:bg-gray-100">
-                                <Link href={`/welcome/profile/saved`} className="font-medium">
+                                <Link
+                                    href={`/welcome/profile/saved`}
+                                    className="font-medium"
+                                >
                                     Konten Tersimpan
                                 </Link>
                             </li>
                             <li className="bg-white px-4 py-3 hover:bg-gray-100">
-                                <Link href={`/welcome/profile/edit/password`} className="font-medium">
+                                <Link
+                                    href={`/welcome/profile/edit/password`}
+                                    className="font-medium"
+                                >
                                     Ganti Kata Sandi
                                 </Link>
                             </li>
                             <li className="w-full bg-white px-4 py-3 rounded-b-lg hover:bg-gray-100">
-                                <Link href={"/"} className="w-full text-red-600 font-medium">
+                                <Link
+                                    href={"/"}
+                                    className="w-full text-red-600 font-medium"
+                                >
                                     Log Out
                                 </Link>
                             </li>

@@ -40,19 +40,17 @@ const LoginPage = () => {
     });
     const router = useRouter();
     const onSubmit: SubmitHandler<FormData> = async (data) => {
-        try {
-            await signIn("credentials", {
-                email: data.email,
-                password: data.password,
-                redirect: false,
-            });
-            router.replace("/welcome");
-        } catch (error: any) {
-            if (error.response.data.status == 404) {
+        signIn("credentials", {
+            email: data.email,
+            password: data.password,
+            redirect: false,
+        }).then(({ ok, error }: any) => {
+            if (ok) {
+                router.replace("/welcome");
             } else {
-                return alert(error.response.data.errors);
+                alert("Credentials do not match!");
             }
-        }
+        });
     };
     return (
         <>
@@ -99,15 +97,20 @@ const LoginPage = () => {
                                             htmlFor="FirstName"
                                             className="block text-sm font-medium text-gray-700"
                                         >
-                                            Username
+                                            Email
                                         </label>
 
                                         <input
                                             type="text"
-                                            id="username"
+                                            id="Email"
                                             className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                             {...register("email")}
                                         />
+                                        {errors.email && (
+                                            <p role="alert">
+                                                {errors.email.message}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="col-span-6">

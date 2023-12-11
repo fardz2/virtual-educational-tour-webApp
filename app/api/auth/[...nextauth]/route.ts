@@ -40,19 +40,20 @@ const authOptions: NextAuthOptions = {
                         const resData = res.data;
                         const resRet: any = {
                             id: resData.id,
-                            name: resData.name,
+                            name: resData.username,
                             email: resData.email,
                             role: resData.role.role,
                             accessToken: res.token,
                         };
+                        console.log(resRet);
                         return resRet;
-                    } else {
-                        console.log("HTTP error! Status:", response.status);
+                    }else {
+                
                         // Handle non-successful response here, return an appropriate JSON response.
-                        return { error: "Authentication failed" };
-                    }
+                       throw new Error("gagal")
+                      }
                 } catch (error) {
-                    console.log("Error", error);
+                    throw new Error("gagal")
                 }
                 return null;
             },
