@@ -2,14 +2,21 @@
 
 import { useRouter } from "next/navigation";
 import React from "react";
+import { ArrowLeft } from "@phosphor-icons/react";
 
 const PersonalData = () => {
     const Router = useRouter();
     return (
         <div className="p-6 bg-white border rounded-lg">
             <div className="flex flex-row justify-between items-center">
-                <button onClick={() => Router.back()}>Kembali</button>
-                <button onClick={() => console.log()}>Simpan</button>
+                <button 
+                    onClick={() => Router.back()}
+                    className="flex flex-row gap-1 items-center justify-center"    
+                >
+                    <ArrowLeft size={20} className=""/>
+                    <p className="font-medium text-gray-900">Kembali</p>
+                </button>
+                <button onClick={() => alert("berhasil disimpan")} className="px-4 py-1.5 text-gray-50 bg-blue-600">Simpan</button>
             </div>
             <h1 className="font-bold text-2xl mt-4">Data Pribadi</h1>
             <hr className="my-4" />

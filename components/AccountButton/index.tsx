@@ -44,36 +44,33 @@ const AccountButton = () => {
                                     Profile
                                 </Link>
                             </li>
-                            {/* <li>
+                            <li className="bg-white px-4 py-2 hover:bg-gray-100">
                                 <Link
-                                    href="/welcome/profile/article"
-                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                    onClick={closeDropdown}
+                                    href={`/welcome/profile/analytic`}
+                                    className=""
                                 >
-                                    My Article
-                                </Link>
-                            </li> */}
-                            {/* <li>
-                                <Link
-                                    href="/welcome/profile/history"
-                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                    onClick={closeDropdown}
-                                >
-                                    History
+                                    Analisis Saya
                                 </Link>
                             </li>
-                            <li>
+                            <li className="bg-white px-4 py-2 hover:bg-gray-100">
                                 <Link
-                                    href="/welcome/profile/forum"
-                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                    onClick={closeDropdown}
+                                    href={`/welcome/profile/saved`}
+                                    className=""
                                 >
-                                    Forum
+                                    Konten Tersimpan
                                 </Link>
-                            </li> */}
-                            <li>
+                            </li>
+                            <li className="bg-white px-4 py-2 hover:bg-gray-100">
+                                <Link
+                                    href={`/welcome/profile/edit/password`}
+                                    className=""
+                                >
+                                    Ganti Kata Sandi
+                                </Link>
+                            </li>
+                            <li className="hover:bg-gray-100">
                                 <button
-                                    className="block px-4 py-2 text-red-700 rounded-b-lg hover:bg-gray-100"
+                                    className="block px-4 py-2 text-red-600 rounded-b-lg"
                                     onClick={() =>
                                         signOut({
                                             redirect: true,

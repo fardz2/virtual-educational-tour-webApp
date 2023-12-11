@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Eye, EyeSlash } from "@phosphor-icons/react";
 
 interface passwordProps {
     id: string;
@@ -37,13 +38,13 @@ const HidePasswordButton = (props: passwordProps) => {
                     }}
                     className={`absolute top-1 right-6 translate-x-1/2 translate-y-1/2`}
                 >
-                    {showPassword ? "show" : "hide"}
+                    {showPassword ? <EyeSlash size={20} /> : <Eye size={20} />}
                 </button>
             </div>
             {props.label == "Password"
                 ? props.error.password && (
-                      <p role="alert">{props.error.password.message}</p>
-                  )
+                    <p role="alert">{props.error.password.message}</p>
+                )
                 : ""}
         </div>
     );

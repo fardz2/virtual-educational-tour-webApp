@@ -22,7 +22,8 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${inter.className} bg-gray-100 dark:bg-gray-900 `}
+                className={`${inter.className} bg-gray-100 dark:bg-gray-900`}
+                suppressHydrationWarning
             >
                 <NextAuthProvider>{children}</NextAuthProvider>
             </body>

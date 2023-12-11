@@ -54,7 +54,7 @@ const RegisterPage = () => {
             await axios.post("http://127.0.0.1:8000/api/register", jsonData, {
                 headers,
             });
-            router.replace("/login");
+            router.replace("/welcome");
         } catch (error: any) {
             if (error.response.data.status == 404) {
                 return alert(error.response.data.message);

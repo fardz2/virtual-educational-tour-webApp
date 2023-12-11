@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const SearchBar = ({}) => {
     return (
         <>
-            <div className="relative">
+            <div className="relative w-full">
                 <input
                     type="text"
                     id="Search"
