@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Badge from "../Badges";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import FavoritButton from "../FavoritButton";
 
 interface TourData {
-    id: number
+    id: number;
     title: string;
     description: string;
     tag: string;
@@ -23,7 +23,10 @@ const TourCard = (props: TourData) => {
 
     return (
         <>
-            <Link href={`${tourPathName}/${props.id}`} className="p-4 w-[240px] relative">
+            <Link
+                href={`${tourPathName}${props.id}`}
+                className="p-4 w-[240px] relative"
+            >
                 {/* <FavoritButton contentId={id} onAddToFavorites={handleAddToFavorites} /> */}
                 <div className="w-60 h-60  rounded-lg">
                     <Image
@@ -34,7 +37,9 @@ const TourCard = (props: TourData) => {
                     />
                 </div>
                 <div className="mt-4 flex flex-col gap-2">
-                    <h1 className="text-2xl font-bold max-w-[240px]">{props.title}</h1>
+                    <h1 className="text-2xl font-bold max-w-[240px]">
+                        {props.title}
+                    </h1>
                     <div className="flex flex-row gap-1">
                         <Badge href="" text={props.tag} type="" />
                         <Badge href="" text="tag2" type="" />
