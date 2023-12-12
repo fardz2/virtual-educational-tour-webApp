@@ -1,5 +1,5 @@
 import ArticleCard from "@/components/ArticleCard";
-import GeneratorTopic from "@/components/GeneratorTopic";
+// import GeneratorTopic from "@/components/GeneratorTopic";
 import AppNavbar from "@/components/Navigation/AppNavbar";
 import ForumSection from "@/pages/ForumSection";
 import TourSection from "@/pages/TourSection";
@@ -10,7 +10,7 @@ const ForumPage = () => {
         <>
             <section className="mt-6 grid grid-cols-2 gap-12">
                 {/* <div className="col-span-2">
-                    <GeneratorTopic/>
+                    <GeneratorTopic />
                 </div> */}
                 <ArticleCard />
                 <ArticleCard />
