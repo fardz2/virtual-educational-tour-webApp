@@ -20,7 +20,13 @@ const PersonalContact = () => {
         register,
         formState: { errors },
     } = useForm<FormData>();
-    const [infoUser, setInfoUser] = useState({});
+    const [infoUser, setInfoUser] = useState({
+        email: "",
+        nomor_ponsel: "",
+        orang_terpercaya: "",
+        status_orang_tersebut: "",
+        yang_dapat_dihubungi: "",
+    });
     const { data: session, status } = useSession();
     useEffect(() => {
         if (status == "authenticated") {
@@ -39,8 +45,13 @@ const PersonalContact = () => {
                     headers,
                 },
             );
-            console.log(response.data.data);
-            setInfoUser(response.data.data);
+            setInfoUser({
+                email: response.data.data.email,
+                nomor_ponsel: response.data.data.nomor_ponsel,
+                orang_terpercaya: response.data.data.orang_terpercaya,
+                status_orang_tersebut: response.data.data.status_orang_tersebut,
+                yang_dapat_dihubungi: response.data.data.yang_dapat_dihubungi,
+            });
         } catch (error: any) {
             if (error.response.data.status == 404) {
                 return alert(error.response.data.message);

@@ -16,7 +16,14 @@ type FormData = {
 };
 const PersonalData = () => {
     const Router = useRouter();
-    const [infoUser, setInfoUser] = useState({});
+    const [infoUser, setInfoUser] = useState({
+        nama_lengkap: "",
+        tempat_kelahiran: "",
+        tanggal_lahir: "",
+        agama: "",
+        alamat_tempat_tinggal_sekarang: "",
+        pendidikan: "",
+    });
     const { data: session, status } = useSession();
     const {
         handleSubmit,
