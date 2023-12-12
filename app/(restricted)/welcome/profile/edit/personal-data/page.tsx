@@ -34,9 +34,12 @@ const PersonalData = () => {
             const headers = {
                 Authorization: `Bearer ${session?.user.accessToken}`,
             };
-            const response = await axios.get("http://127.0.0.1:8000/api/info", {
-                headers,
-            });
+            const response = await axios.get(
+                "https://virtual-educational-vr-api-production.up.railway.app/api/info",
+                {
+                    headers,
+                },
+            );
             console.log(response.data.data);
             setInfoUser(response.data.data);
         } catch (error: any) {
