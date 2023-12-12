@@ -9,13 +9,13 @@ const ForumPage = () => {
     return (
         <>
             <section className="mt-6 grid grid-cols-2 gap-12">
-                <div className="col-span-2">
+                {/* <div className="col-span-2">
                     <GeneratorTopic/>
-                </div>
-                <ArticleCard/>
-                <ArticleCard/>
-                <ArticleCard/>
-                <ArticleCard/>
+                </div> */}
+                <ArticleCard />
+                <ArticleCard />
+                <ArticleCard />
+                <ArticleCard />
             </section>
         </>
     );
