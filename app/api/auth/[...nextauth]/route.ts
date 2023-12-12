@@ -32,7 +32,7 @@ const authOptions: NextAuthOptions = {
                 };
                 try {
                     const response = await fetch(
-                        "http://127.0.0.1:8000/api/login",
+                        `https://virtual-educational-vr-api-production.up.railway.app/api/login`,
                         options,
                     );
                     if (response.ok) {

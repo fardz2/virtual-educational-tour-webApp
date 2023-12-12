@@ -55,9 +55,13 @@ const PersonalData = () => {
             };
             const jsonData = JSON.stringify(data);
             console.log(jsonData);
-            await axios.put("http://127.0.0.1:8000/api/edit-info", jsonData, {
-                headers,
-            });
+            await axios.put(
+                `https://virtual-educational-vr-api-production.up.railway.app/api/edit-info`,
+                jsonData,
+                {
+                    headers,
+                },
+            );
             getInfoUser();
         } catch (error: any) {
             console.log(error);

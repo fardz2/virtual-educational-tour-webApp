@@ -15,9 +15,12 @@ const ForumSection = (): React.JSX.Element => {
         const headers = {
             "Content-Type": "application/json",
         };
-        const response = await axios.get("http://127.0.0.1:8000/api/article", {
-            headers,
-        });
+        const response = await axios.get(
+            `https://virtual-educational-vr-api-production.up.railway.app/api/article`,
+            {
+                headers,
+            },
+        );
         setArticle(response.data.data);
     };
     return (

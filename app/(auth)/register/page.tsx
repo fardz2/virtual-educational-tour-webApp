@@ -51,15 +51,19 @@ const RegisterPage = () => {
                 "Content-Type": "application/json",
             };
             const jsonData = JSON.stringify(data);
-            await axios.post("http://127.0.0.1:8000/api/register", jsonData, {
-                headers,
-            });
+            await axios.post(
+                `https://virtual-educational-vr-api-production.up.railway.app/api/register`,
+                jsonData,
+                {
+                    headers,
+                },
+            );
             router.replace("/welcome");
         } catch (error: any) {
             if (error.response.data.status == 404) {
                 return alert(error.response.data.message);
             } else {
-                return alert(error.response.data.errors.email);
+                return alert(error.response.data.errors);
             }
         }
     };

@@ -20,7 +20,7 @@ const page = ({ params }: { params: { slug: string } }) => {
             "Content-Type": "application/json",
         };
         const response = await axios.get(
-            `http://127.0.0.1:8000/api/article/${params.slug}`,
+            `https://virtual-educational-vr-api-production.up.railway.app/api/article/${params.slug}`,
             {
                 headers,
             },

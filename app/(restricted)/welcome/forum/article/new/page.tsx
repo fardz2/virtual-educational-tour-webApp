@@ -53,9 +53,13 @@ const NewArticlePage = () => {
             };
             const jsonData = JSON.stringify(data);
             console.log(jsonData);
-            await axios.post("http://127.0.0.1:8000/api/article", jsonData, {
-                headers,
-            });
+            await axios.post(
+                `https://virtual-educational-vr-api-production.up.railway.app/api/article`,
+                jsonData,
+                {
+                    headers,
+                },
+            );
             router.push("/welcome");
         } catch (error: any) {
             console.log(error);
