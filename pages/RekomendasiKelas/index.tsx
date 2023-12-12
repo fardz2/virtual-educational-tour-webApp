@@ -23,3 +23,4 @@ const RekomendasiKelas = () => {
         </div>
     );
 };
+export default RekomendasiKelas;
