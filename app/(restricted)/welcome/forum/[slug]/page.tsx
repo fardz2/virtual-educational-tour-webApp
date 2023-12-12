@@ -5,7 +5,7 @@ import axios from "axios";
 import parse from "html-react-parser";
 import { DiscussionEmbed } from "disqus-react";
 
-const page = ({ params }: { params: { slug: string } }) => {
+const detailForum = ({ params }: { params: { slug: string } }) => {
     const [infoArticle, setInfoArticle] = useState({
         id: "",
         title: "",
@@ -61,4 +61,4 @@ const page = ({ params }: { params: { slug: string } }) => {
     );
 };
 
-export default page;
+export default detailForum;
