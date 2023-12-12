@@ -34,7 +34,7 @@ const PersonalData = () => {
         if (status == "authenticated") {
             getInfoUser();
         }
-    }, [status]);
+    }, [status, infoUser]);
 
     const getInfoUser = async () => {
         try {

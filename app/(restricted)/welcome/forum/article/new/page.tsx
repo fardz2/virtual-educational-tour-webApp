@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -65,9 +65,6 @@ const NewArticlePage = () => {
             console.log(error);
         }
     };
-    useEffect(() => {
-        console.log(session?.user.accessToken);
-    }, [session]);
 
     return (
         <div className="mt-12">

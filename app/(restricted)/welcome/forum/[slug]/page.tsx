@@ -13,7 +13,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
     });
     useEffect(() => {
         getInfoArticle();
-    }, []);
+    }, [infoArticle]);
     const getInfoArticle = async () => {
         const headers = {
             "Content-Type": "application/json",

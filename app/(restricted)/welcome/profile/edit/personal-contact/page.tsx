@@ -2,6 +2,7 @@
 
 import { ArrowLeft } from "@phosphor-icons/react";
 import axios from "axios";
+import { info } from "console";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -32,7 +33,7 @@ const PersonalContact = () => {
         if (status == "authenticated") {
             getInfoUser();
         }
-    }, [status]);
+    }, [status, infoUser]);
 
     const getInfoUser = async () => {
         try {
