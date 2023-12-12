@@ -10,6 +10,7 @@ import { useEffect } from "react";
 
 const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
     const pathNameNow = usePathname();
+
     const { data: session, status } = useSession();
 
     // const user =  getServerSession()
