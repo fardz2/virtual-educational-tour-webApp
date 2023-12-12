@@ -1,14 +1,16 @@
 "use client";
 
-import React from "react";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import React, { useEffect, useState } from "react";
+import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
 
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const modules = {
     toolbar: [
@@ -35,6 +37,12 @@ const schema = yup
     })
     .required();
 const NewArticlePage = () => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
     const {
         handleSubmit,
         control,
@@ -67,52 +75,58 @@ const NewArticlePage = () => {
     };
 
     return (
-        <div className="mt-12">
-            <div className="w-full flex flex-row justify-end mb-6">
-                <button
-                    className="border"
-                    onClick={() => alert("Gajadi Nulis")}
-                >
-                    {" "}
-                    Cancel
-                </button>
-                <input
-                    type="submit"
-                    className="border"
-                    onClick={handleSubmit(onSubmit)}
-                />
-            </div>
-            <div className="mb-5">
-                <label
-                    htmlFor="FirstName"
-                    className="block text-sm font-medium text-gray-700"
-                >
-                    Title
-                </label>
-
-                <input
-                    type="text"
-                    id="Email"
-                    className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                    {...register("title")}
-                />
-                {errors.title && <p role="alert">{errors.title.message}</p>}
-            </div>
-            <Controller
-                name="content"
-                control={control}
-                render={({ field: { onChange, onBlur } }) => (
-                    <ReactQuill
-                        theme="snow"
-                        modules={modules}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        placeholder="Selamat berkarya...😁"
+        <>
+            <div className="mt-12">
+                <div className="w-full flex flex-row justify-end mb-6">
+                    <button
+                        className="border"
+                        onClick={() => alert("Gajadi Nulis")}
+                    >
+                        {" "}
+                        Cancel
+                    </button>
+                    <input
+                        type="submit"
+                        className="border"
+                        onClick={handleSubmit(onSubmit)}
                     />
-                )}
-            />
-            {errors.content && <p role="alert">{errors.content.message}</p>}
-        </div>
+                </div>
+                <div className="mb-5">
+                    <label
+                        htmlFor="FirstName"
+                        className="block text-sm font-medium text-gray-700"
+                    >
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="Email"
+                        className="mt-1 w-full h-11 border rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                        {...register("title")}
+                    />
+                    {errors.title && <p role="alert">{errors.title.message}</p>}
+                </div>
+                <Controller
+                    name="content"
+                    control={control}
+                    render={({ field: { onChange, onBlur } }) =>
+                        isClient ? (
+                            <ReactQuill
+                                theme="snow"
+                                modules={modules}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                                placeholder="Selamat berkarya...😁"
+                            />
+                        ) : (
+                            <div>Loading ReactQuill...</div>
+                        )
+                    }
+                />
+                {errors.content && <p role="alert">{errors.content.message}</p>}
+            </div>
+        </>
     );
 };
 
