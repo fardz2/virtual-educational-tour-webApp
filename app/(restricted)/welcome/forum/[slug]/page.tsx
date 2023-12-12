@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import AppNavbar from "@/components/Navigation/AppNavbar";
 import axios from "axios";
 import parse from "html-react-parser";
 import { DiscussionEmbed } from "disqus-react";
 
-const detailForum = ({ params }: { params: { slug: string } }) => {
+const Page = ({ params }: { params: { slug: string } }) => {
     const [infoArticle, setInfoArticle] = useState({
         id: "",
         title: "",
@@ -61,4 +60,4 @@ const detailForum = ({ params }: { params: { slug: string } }) => {
     );
 };
 
-export default detailForum;
+export default Page;
