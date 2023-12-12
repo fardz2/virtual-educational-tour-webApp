@@ -27,7 +27,7 @@ const ForumSection = (): React.JSX.Element => {
         <>
             <div className="px-4 py-6">
                 <Link
-                    href={`welcome/forum/article/new`}
+                    href={`/welcome/forum/article/new`}
                     className="w-full flex justify-center items-center text-center py-2.5 border shadow-sm rounded-md bg-white font-medium hover:opacity-90"
                 >
                     Add Topics
